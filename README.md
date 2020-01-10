@@ -1,2 +1,4 @@
 # FRC-Robotics-2019-20
-Welcome to the Group Chat bois
+Below you will find a table of contents.
+
+Thank you for reading the README!
