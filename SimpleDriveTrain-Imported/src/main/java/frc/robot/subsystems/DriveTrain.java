@@ -21,24 +21,31 @@ public class DriveTrain extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  public VictorSPX LeftMotors = new VictorSPX(RobotMap.LEFT_MOTORS_ID);
-  public VictorSPX RightMotors = new VictorSPX(RobotMap.RIGHT_MOTORS_ID);
-
+  public VictorSPX LeftMotor1 = new VictorSPX(RobotMap.LEFT_MOTOR1_ID);
+  public VictorSPX RightMotor1 = new VictorSPX(RobotMap.RIGHT_MOTOR1_ID);
+  public VictorSPX LeftMotor2 = new VictorSPX(RobotMap.LEFT_MOTOR2_ID);
+  public VictorSPX RightMotor2 = new VictorSPX(RobotMap.RIGHT_MOTOR2_ID);
   @Override
   public void initDefaultCommand() {
     setDefaultCommand(new ControlDrive());
   }
 
   public DriveTrain(){
-    LeftMotors.setInverted(true);
+    LeftMotor1.setInverted(true);
+    LeftMotor2.setInverted(true);
+
   }
 
   public void setLeftMotors(double percent){
-    LeftMotors.set(ControlMode.PercentOutput, percent);
+    LeftMotor1.set(ControlMode.PercentOutput, percent);
+    LeftMotor2.set(ControlMode.PercentOutput, percent);
+
   }
 
   public void setRightMotors(double percent){
-    RightMotors.set(ControlMode.PercentOutput, percent);
+    RightMotor1.set(ControlMode.PercentOutput, percent);
+    RightMotor2.set(ControlMode.PercentOutput, percent);
+
   }
 
 }
