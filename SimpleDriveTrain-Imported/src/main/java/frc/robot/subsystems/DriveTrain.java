@@ -25,6 +25,7 @@ public class DriveTrain extends Subsystem {
   public VictorSPX RightMotor1 = new VictorSPX(RobotMap.RIGHT_MOTOR1_ID);
   public VictorSPX LeftMotor2 = new VictorSPX(RobotMap.LEFT_MOTOR2_ID);
   public VictorSPX RightMotor2 = new VictorSPX(RobotMap.RIGHT_MOTOR2_ID);
+  
   @Override
   public void initDefaultCommand() {
     setDefaultCommand(new ControlDrive());
