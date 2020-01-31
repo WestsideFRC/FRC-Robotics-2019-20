@@ -21,10 +21,10 @@ public class DriveTrain extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  public VictorSPX LeftMotor1 = new VictorSPX(RobotMap.LEFT_MOTOR1_ID);
-  public VictorSPX RightMotor1 = new VictorSPX(RobotMap.RIGHT_MOTOR1_ID);
-  public VictorSPX LeftMotor2 = new VictorSPX(RobotMap.LEFT_MOTOR2_ID);
-  public VictorSPX RightMotor2 = new VictorSPX(RobotMap.RIGHT_MOTOR2_ID);
+  private VictorSPX LeftMotor1 = new VictorSPX(RobotMap.LEFT_DRIVE_MOTOR1_ID);
+  private VictorSPX RightMotor1 = new VictorSPX(RobotMap.RIGHT_DRIVE_MOTOR1_ID);
+  private VictorSPX LeftMotor2 = new VictorSPX(RobotMap.LEFT_DRIVE_MOTOR2_ID);
+  private VictorSPX RightMotor2 = new VictorSPX(RobotMap.RIGHT_DRIVE_MOTOR2_ID);
   
   @Override
   public void initDefaultCommand() {
