@@ -32,17 +32,18 @@ public class DriveTrain extends Subsystem {
   }
 
   public DriveTrain(){
-    LeftMotor1.setInverted(true);
+    LeftMotor1.setInverted(true); //makes sure both sides turn the same direction
     LeftMotor2.setInverted(true);
-
   }
 
+  //makes sure the left motors are never turned against each other
   public void setLeftMotors(double percent){
     LeftMotor1.set(ControlMode.PercentOutput, percent);
     LeftMotor2.set(ControlMode.PercentOutput, percent);
 
   }
 
+  //makes sure the right motors are never turned against each other
   public void setRightMotors(double percent){
     RightMotor1.set(ControlMode.PercentOutput, percent);
     RightMotor2.set(ControlMode.PercentOutput, percent);
