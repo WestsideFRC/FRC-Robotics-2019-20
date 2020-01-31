@@ -16,8 +16,8 @@ package frc.robot;
 public class RobotMap {
 
 	public static final int LEFT_MOTOR1_ID = 0;
-	public static final int RIGHT_MOTOR1_ID = 2;
-	public static final int LEFT_MOTOR2_ID = 1;
+	public static final int RIGHT_MOTOR1_ID = 4;
+	public static final int LEFT_MOTOR2_ID = 2;
 	public static final int RIGHT_MOTOR2_ID = 3;
 	public static final int CONTROLLER_PORT = 0;
 	public static final int DRIVE_AXIS = 1;
