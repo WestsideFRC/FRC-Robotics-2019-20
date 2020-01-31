@@ -21,6 +21,8 @@ public class DriveTrain extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
+  //all instances of drive motors
+  //LeftMotor2 and RightMotor2 are slaves to LeftMotor1 and RightMotor1 respectively
   private VictorSPX LeftMotor1 = new VictorSPX(RobotMap.LEFT_DRIVE_MOTOR1_ID);
   private VictorSPX RightMotor1 = new VictorSPX(RobotMap.RIGHT_DRIVE_MOTOR1_ID);
   private VictorSPX LeftMotor2 = new VictorSPX(RobotMap.LEFT_DRIVE_MOTOR2_ID);
@@ -32,22 +34,25 @@ public class DriveTrain extends Subsystem {
   }
 
   public DriveTrain(){
-    LeftMotor1.setInverted(true); //makes sure both sides turn the same direction
+    //invert the left motors so that all motors spin the wheels forward
+    LeftMotor1.setInverted(true);
     LeftMotor2.setInverted(true);
+
+    //set the left and right #2 motors to be slaves to the #1 motors
+    //this way, both motors in the same gear box will spin at exactly the same speed
+    LeftMotor2.set(ControlMode.Follower, RobotMap.LEFT_DRIVE_MOTOR1_ID);
+    RightMotor2.set(ControlMode.Follower,RobotMap.RIGHT_DRIVE_MOTOR1_ID);
+
   }
 
-  //makes sure the left motors are never turned against each other
+  //method for setting the speed of the left wheels
   public void setLeftMotors(double percent){
     LeftMotor1.set(ControlMode.PercentOutput, percent);
-    LeftMotor2.set(ControlMode.PercentOutput, percent);
-
   }
 
-  //makes sure the right motors are never turned against each other
+  //method for setting the speed of the right wheels
   public void setRightMotors(double percent){
     RightMotor1.set(ControlMode.PercentOutput, percent);
-    RightMotor2.set(ControlMode.PercentOutput, percent);
-
   }
 
 }
