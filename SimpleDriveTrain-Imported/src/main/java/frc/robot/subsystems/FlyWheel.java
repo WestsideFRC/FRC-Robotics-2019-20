@@ -24,7 +24,7 @@ public class FlyWheel extends Subsystem {
 
   }
 
-  public void FlyWheel(){
+  public void flyWheel(){
     //set left motors inverted
     LeftFlyMotor1.setInverted(true);
     LeftFlyMotor2.setInverted(true);
