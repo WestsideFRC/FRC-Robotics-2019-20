@@ -24,20 +24,28 @@ public class FlyWheel extends Subsystem {
 
   }
   public void FlyWheel(){
+    //set left motors inverted
     LeftFlyMotor1.setInverted(true);
     LeftFlyMotor2.setInverted(true);
+    RightFlyMotor1.setInverted(false);
+    RightFlyMotor2.setInverted(false);
+
+    //set all motors to be slaves to RightFlyMotor1
+    LeftFlyMotor1.set(ControlMode.Follower, RobotMap.RIGHT_FLYWHEEL_MOTOR1_ID)
+    LeftFlyMotor2.set(ControlMode.Follower, RobotMap.RIGHT_FLYWHEEL_MOTOR1_ID);
+    RightFlyMotor2.set(ControlMode.Follower,RobotMap.RIGHT_FLYWHEEL_MOTOR1_ID);
   }
   
   //instances of all four motors that spin the flywheel
   private VictorSPX LeftFlyMotor1 = new VictorSPX(RobotMap.LEFT_FLYWHEEL_MOTOR1_ID);
-  private VictorSPX RightFlyMotor1 = new VictorSPX(RobotMap.RIGHT_FLYWHEEL_MOTOR1_ID);
+  private VictorSPX RightFlyMotor1 = new VictorSPX(RobotMap.RIGHT_FLYWHEEL_MOTOR1_ID); //this motor is the master
   private VictorSPX LeftFlyMotor2 = new VictorSPX(RobotMap.LEFT_FLYWHEEL_MOTOR2_ID);
   private VictorSPX RightFlyMotor2 = new VictorSPX(RobotMap.RIGHT_FLYWHEEL_MOTOR2_ID);
 
 
-  //
+  //mothod for setting motor power
   public void setFlyWheelPower(double percent){
-
+    RightFlyMotor1.set(ControlMode.PercentOutput, percent);
   }
 
 }
