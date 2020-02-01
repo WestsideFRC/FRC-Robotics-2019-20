@@ -28,7 +28,9 @@ public class Robot extends TimedRobot {
 
   public static DriveTrain driveTrain = new DriveTrain();
   
-  public static FlyWheel flyWheel = new FlyWheel();
+  //public static FlyWheel flyWheel = new FlyWheel();
+  //commented for the robot without the flywheel finished
+
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
