@@ -31,7 +31,7 @@ public class FlyWheel extends Subsystem {
     RightFlyMotor2.setInverted(false);
 
     //set all motors to be slaves to RightFlyMotor1
-    LeftFlyMotor1.set(ControlMode.Follower, RobotMap.RIGHT_FLYWHEEL_MOTOR1_ID)
+    LeftFlyMotor1.set(ControlMode.Follower, RobotMap.RIGHT_FLYWHEEL_MOTOR1_ID);
     LeftFlyMotor2.set(ControlMode.Follower, RobotMap.RIGHT_FLYWHEEL_MOTOR1_ID);
     RightFlyMotor2.set(ControlMode.Follower,RobotMap.RIGHT_FLYWHEEL_MOTOR1_ID);
   }
