@@ -18,19 +18,19 @@ public class RobotMap {
 	//CAN maping
 	public static final int LEFT_DRIVE_MOTOR1_ID = 0; 	//front left motor CAN ID
 	public static final int RIGHT_DRIVE_MOTOR1_ID = 4;	//front right motor CAN ID
-	public static final int LEFT_DRIVE_MOTOR2_ID = 2;		//back left motor CAN ID
+	public static final int LEFT_DRIVE_MOTOR2_ID = 2;	//back left motor CAN ID
 	public static final int RIGHT_DRIVE_MOTOR2_ID = 3;	//back right motor CAN ID
 
 	public static final int LEFT_FLYWHEEL_MOTOR1_ID = 0; 	//front left motor CAN ID
 	public static final int RIGHT_FLYWHEEL_MOTOR1_ID = 4;	//front right motor CAN ID
-	public static final int LEFT_FLYWHEEL_MOTOR2_ID = 2;		//back left motor CAN ID
+	public static final int LEFT_FLYWHEEL_MOTOR2_ID = 2;	//back left motor CAN ID
 	public static final int RIGHT_FLYWHEEL_MOTOR2_ID = 3;	//back right motor CAN ID
 
 
 	//Controller maping
-	public static final int CONTROLLER_PORT = 0; //the port the controller is pluged into
-	public static final int DRIVE_AXIS = 1; //the axis that controls moving forward and backward
-	public static final int TURN_AXIS = 4;	//the axis that controls turning left and right
+	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
+	public static final int DRIVE_AXIS = 1; 		//the axis that controls moving forward and backward
+	public static final int TURN_AXIS = 4;			//the axis that controls turning left and right
 
 
 	//program constants
