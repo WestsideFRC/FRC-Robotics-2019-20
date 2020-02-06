@@ -21,10 +21,10 @@ public class RobotMap {
 	public static final int LEFT_DRIVE_MOTOR2_ID = 2;	//back left motor CAN ID
 	public static final int RIGHT_DRIVE_MOTOR2_ID = 3;	//back right motor CAN ID
 
-	public static final int LEFT_FLYWHEEL_MOTOR1_ID = 0; 	//front left motor CAN ID
-	public static final int RIGHT_FLYWHEEL_MOTOR1_ID = 4;	//front right motor CAN ID
-	public static final int LEFT_FLYWHEEL_MOTOR2_ID = 2;	//back left motor CAN ID
-	public static final int RIGHT_FLYWHEEL_MOTOR2_ID = 3;	//back right motor CAN ID
+	public static final int LEFT_LOW_FLYWHEEL_MOTOR_ID = 0; 	//lower left motor CAN ID
+	public static final int RIGHT_LOW_FLYWHEEL_MOTOR_ID = 0;	//lower right motor CAN ID
+	public static final int LEFT_HIGH_FLYWHEEL_MOTOR_ID = 0;	//upper left motor CAN ID
+	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 0;	//upper right motor CAN ID
 
 
 	//Controller maping
