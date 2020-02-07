@@ -8,11 +8,13 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.robot.Robot;
+import frc.robot.RobotMap;
 
-public class PIDFlyWheel extends Command {
-  public PIDFlyWheel() {
-    // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
+public class TeleOpDrive extends Command {
+
+  public TeleOpDrive() {
+    requires(Robot.driveTrain);
   }
 
   // Called just before this Command runs the first time
@@ -23,6 +25,13 @@ public class PIDFlyWheel extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    
+    double drive = RobotMap.DRIVE_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.DRIVE_AXIS);
+    double turn = RobotMap.TURN_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.TURN_AXIS);
+
+    Robot.driveTrain.setLeftMotors(drive - turn);
+    Robot.driveTrain.setRightMotors(drive + turn);
+    
   }
 
   // Make this return true when this Command no longer needs to run execute()

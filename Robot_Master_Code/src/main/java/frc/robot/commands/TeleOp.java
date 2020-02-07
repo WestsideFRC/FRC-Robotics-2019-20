@@ -10,16 +10,16 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import frc.robot.Robot;
 
-public class UserControl extends CommandGroup {
+public class TeleOp extends CommandGroup {
   /**
    * Add your docs here.
    */
 
   //all teleop commands
-  public ControlDrive drive = new ControlDrive();
-  public PIDFlyWheel flywheel = new PIDFlyWheel();
+  public TeleOpDrive drive = new TeleOpDrive();
+  public TeleOpFlyWheel flywheel = new TeleOpFlyWheel();
 
-  public UserControl() {
+  public TeleOp() {
     //set all commands to run at the smae time durring teleop
     addParallel(drive);
     addParallel(flywheel);

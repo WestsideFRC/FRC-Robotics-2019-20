@@ -12,7 +12,6 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
-import frc.robot.commands.PIDFlyWheel;
 
 /**
  * Add your docs here.
@@ -21,8 +20,7 @@ public class FlyWheel extends Subsystem {
 
   @Override
   public void initDefaultCommand() {
-    setDefaultCommand(new PIDFlyWheel());
-
+    //no default command
   }
   
   //instances of all four motors that spin the flywheel
