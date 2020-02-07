@@ -36,7 +36,7 @@ public class FlyWheel extends Subsystem {
   private VictorSPX MasterMotor = RightLowFlyMotor;
 
 
-  public void FlyWheel(){
+  public FlyWheel(){
     //set left motors inverted
     LeftLowFlyMotor.setInverted(true);
     LeftHighFlyMotor.setInverted(true);

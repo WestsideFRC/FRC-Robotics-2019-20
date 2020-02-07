@@ -26,7 +26,13 @@ public class RobotMap {
 	public static final int LEFT_HIGH_FLYWHEEL_MOTOR_ID = 0;	//upper left motor CAN ID
 	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 0;	//upper right motor CAN ID
 
+	public static final int LEFT_INDEXER_MOTOR_ID = 0;
+	public static final int RIGHT_INDEXER_MOTOR_ID = 0;
 
+	public static final int INTAKE_SPIN_MOTOR_ID = 0;
+	public static final int INTAKE_LIFT_MOTOR_ID = 0;
+
+	
 	//Controller maping
 	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
 	public static final int DRIVE_AXIS = 1; 		//the axis that controls moving forward and backward
