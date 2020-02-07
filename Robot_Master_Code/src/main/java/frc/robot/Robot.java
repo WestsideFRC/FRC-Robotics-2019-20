@@ -12,8 +12,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.subsystems.DriveTrain;
-import frc.robot.subsystems.FlyWheel;
+import frc.robot.subsystems.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -26,10 +25,12 @@ public class Robot extends TimedRobot {
 
   public static OI m_oi;
 
+
+  //All program subsysystems
   public static DriveTrain driveTrain = new DriveTrain();
-  
-  //public static FlyWheel flyWheel = new FlyWheel();
-  //commented for the robot without the flywheel finished
+  public static FlyWheel flyWheel = new FlyWheel();
+  public static Indexer indexer = new Indexer();
+  public static Intake intake = new Intake();
 
 
   Command m_autonomousCommand;
@@ -118,6 +119,8 @@ public class Robot extends TimedRobot {
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();
     }
+
+
   }
 
   /**
