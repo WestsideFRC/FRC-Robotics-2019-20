@@ -8,11 +8,15 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.robot.*;
+import frc.robot.subsystems.FlyWheel;
 
-public class PIDFlyWheel extends Command {
-  public PIDFlyWheel() {
-    // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
+public class TeleOpFlyWheel extends Command {
+
+  private OI oi = Robot.m_oi;
+
+  public TeleOpFlyWheel() {
+    requires(Robot.flyWheel);
   }
 
   // Called just before this Command runs the first time
@@ -23,6 +27,15 @@ public class PIDFlyWheel extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_50)){
+      Robot.flyWheel.setFlyWheelPower(50);
+    }
+    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_75)){
+      Robot.flyWheel.setFlyWheelPower(75);
+    }
+    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
+      Robot.flyWheel.setFlyWheelPower(100);
+    }
   }
 
   // Make this return true when this Command no longer needs to run execute()

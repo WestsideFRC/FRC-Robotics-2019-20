@@ -18,19 +18,31 @@ public class RobotMap {
 	//CAN maping
 	public static final int LEFT_DRIVE_MOTOR1_ID = 5; 	//front left motor CAN ID
 	public static final int RIGHT_DRIVE_MOTOR1_ID = 4;	//front right motor CAN ID
-	public static final int LEFT_DRIVE_MOTOR2_ID = 2;		//back left motor CAN ID
+	public static final int LEFT_DRIVE_MOTOR2_ID = 2;	//back left motor CAN ID
 	public static final int RIGHT_DRIVE_MOTOR2_ID = 3;	//back right motor CAN ID
 
-	public static final int LEFT_FLYWHEEL_MOTOR1_ID = 7; 	//front left motor CAN ID
-	public static final int RIGHT_FLYWHEEL_MOTOR1_ID = 6;	//front right motor CAN ID
-	public static final int LEFT_FLYWHEEL_MOTOR2_ID = 0;		//back left motor CAN ID
-	public static final int RIGHT_FLYWHEEL_MOTOR2_ID = 1;	//back right motor CAN ID
+	public static final int LEFT_LOW_FLYWHEEL_MOTOR_ID = 7; 	//lower left motor CAN ID
+	public static final int RIGHT_LOW_FLYWHEEL_MOTOR_ID = 6;	//lower right motor CAN ID
+	public static final int LEFT_HIGH_FLYWHEEL_MOTOR_ID = 0;	//upper left motor CAN ID
+	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 1;	//upper right motor CAN ID
 
+	public static final int LEFT_INDEXER_MOTOR_ID = 0;
+	public static final int RIGHT_INDEXER_MOTOR_ID = 0;
 
+	public static final int INTAKE_SPIN_MOTOR_ID = 0;
+	public static final int INTAKE_LIFT_MOTOR_ID = 0;
+
+	
 	//Controller maping
-	public static final int CONTROLLER_PORT = 0; //the port the controller is pluged into
-	public static final int DRIVE_AXIS = 1; //the axis that controls moving forward and backward
-	public static final int TURN_AXIS = 4;	//the axis that controls turning left and right
+	//TODO: set all contrller mappings to OI constants
+	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
+	public static final int DRIVE_AXIS = 1; 		//the axis that controls moving forward and backward
+	public static final int TURN_AXIS = 4;			//the axis that controls turning left and right
+
+	public static final int FLYWHEEL_BUTTON_50 = 0;	//buttons that set flywheel power %
+	public static final int FLYWHEEL_BUTTON_75 = 0;
+	public static final int FLYWHEEL_BUTTON_100 = 0;
+
 
 
 	//program constants

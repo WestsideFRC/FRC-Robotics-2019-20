@@ -7,12 +7,15 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotMap;
 
 /**
  * Add your docs here.
  */
-public class Indexer extends Subsystem {
+public class Intake extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
@@ -20,5 +23,11 @@ public class Indexer extends Subsystem {
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
+    
+    VictorSPX spinner = new VictorSPX(RobotMap.INTAKE_SPIN_MOTOR_ID);
+    VictorSPX lifter = new VictorSPX(RobotMap.INTAKE_LIFT_MOTOR_ID);
+
+
+
   }
 }

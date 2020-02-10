@@ -11,9 +11,9 @@ import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
 
-public class ControlDrive extends Command {
+public class TeleOpDrive extends Command {
 
-  public ControlDrive() {
+  public TeleOpDrive() {
     requires(Robot.driveTrain);
   }
 
