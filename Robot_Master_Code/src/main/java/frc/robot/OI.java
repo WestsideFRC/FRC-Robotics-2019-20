@@ -15,6 +15,25 @@ import edu.wpi.first.wpilibj.Joystick;
  */
 public class OI {
 
+  //Logitech controller we will use in competition
   public Joystick controller = new Joystick(RobotMap.CONTROLLER_PORT);
+
+  //Logitech Controller Mapping TODO: complete. do not use until complete
+  public static int JOYST_LEFT_VERT = 0;
+  public static int JOYST_LEFT_HORIZ = 0;
+  public static int JOYST_RIGHT_VERT = 0;
+  public static int JOYST_RIGHT_HORIZ = 0;
+  public static int BUTTON_A = 0;
+  public static int BUTTON_B = 0;
+  public static int BUTTON_C = 0;
+  public static int BUTTON_D = 0;
+  public static int LEFT = 0;
+  public static int RIGHT = 0;
+  public static int UP = 0;
+  public static int DOWN = 0;
+  public static int LB = 0;
+  public static int RB = 0;
+  public static int LT = 0;
+  public static int RT = 0;
 
 }
