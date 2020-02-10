@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.*;
+import frc.robot.commands.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -120,7 +121,8 @@ public class Robot extends TimedRobot {
       m_autonomousCommand.cancel();
     }
 
-
+    TeleOp teleOp = new TeleOp();
+  
   }
 
   /**
