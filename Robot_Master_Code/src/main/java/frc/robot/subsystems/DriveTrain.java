@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -20,12 +21,13 @@ public class DriveTrain extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  //all instances of drive motors
-  //LeftMotor2 and RightMotor2 are slaves to LeftMotor1 and RightMotor1 respectively
+  // all instances of drive motors
+  // LeftMotor2 and RightMotor2 are slaves to LeftMotor1 and RightMotor1
+  // respectively
   private VictorSPX LeftMotor1 = new VictorSPX(RobotMap.LEFT_DRIVE_MOTOR1_ID);
   private VictorSPX RightMotor1 = new VictorSPX(RobotMap.RIGHT_DRIVE_MOTOR1_ID);
-  private VictorSPX LeftMotor2 = new VictorSPX(RobotMap.LEFT_DRIVE_MOTOR2_ID);
-  private VictorSPX RightMotor2 = new VictorSPX(RobotMap.RIGHT_DRIVE_MOTOR2_ID);
+  private TalonSRX LeftMotor2 = new TalonSRX(RobotMap.LEFT_DRIVE_MOTOR2_ID);
+  private TalonSRX RightMotor2 = new TalonSRX(RobotMap.RIGHT_DRIVE_MOTOR2_ID);
   
   //not used since the ControlDrive will control all comands
   @Override
