@@ -38,6 +38,11 @@ public class RobotMap {
 	public static final int DRIVE_AXIS = 1; 		//the axis that controls moving forward and backward
 	public static final int TURN_AXIS = 4;			//the axis that controls turning left and right
 
+	public static final int FLYWHEEL_BUTTON_50 = 0;	//buttons that set flywheel power %
+	public static final int FLYWHEEL_BUTTON_75 = 0;
+	public static final int FLYWHEEL_BUTTON_100 = 0;
+
+
 
 	//program constants
 	public static final double TURN_SENSITIVITY = 1; 	//how much the robot turns in responce to the joystick (angular speed per joystick level)
