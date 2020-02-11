@@ -36,6 +36,7 @@ public class RobotMap {
 	//Controller maping
 	//TODO: set all contrller mappings to OI constants
 	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
+	
 	public static final int DRIVE_AXIS = 1; 		//the axis that controls moving forward and backward
 	public static final int TURN_AXIS = 4;			//the axis that controls turning left and right
 
