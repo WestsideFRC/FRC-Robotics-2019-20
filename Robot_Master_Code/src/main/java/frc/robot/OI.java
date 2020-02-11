@@ -18,22 +18,22 @@ public class OI {
   //Logitech controller we will use in competition
   public Joystick controller = new Joystick(RobotMap.CONTROLLER_PORT);
 
-  //Logitech Controller Mapping TODO: complete. do not use until complete
-  public static int JOYST_LEFT_VERT = 0;
+  //Logitech Controller Mapping TODO: make sure maping is correct
+  public static int JOYST_LEFT_VERT = 1;
   public static int JOYST_LEFT_HORIZ = 0;
-  public static int JOYST_RIGHT_VERT = 0;
-  public static int JOYST_RIGHT_HORIZ = 0;
+  public static int JOYST_RIGHT_VERT = 3;
+  public static int JOYST_RIGHT_HORIZ = 2;
   public static int BUTTON_A = 0;
-  public static int BUTTON_B = 0;
-  public static int BUTTON_C = 0;
-  public static int BUTTON_D = 0;
+  public static int BUTTON_B = 1;
+  public static int BUTTON_C = 2;
+  public static int BUTTON_D = 3;
   public static int LEFT = 0;
   public static int RIGHT = 0;
   public static int UP = 0;
   public static int DOWN = 0;
-  public static int LB = 0;
-  public static int RB = 0;
-  public static int LT = 0;
-  public static int RT = 0;
+  public static int LB = 4;
+  public static int RB = 5;
+  public static int LT = 6;
+  public static int RT = 7;
 
 }
