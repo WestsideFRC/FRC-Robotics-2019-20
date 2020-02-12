@@ -120,7 +120,7 @@ public class Robot extends TimedRobot {
       m_autonomousCommand.cancel();
     }
 
-    TeleOp teleOp = new TeleOp();
+    //TeleOp teleOp = new TeleOp();
   
   }
 
