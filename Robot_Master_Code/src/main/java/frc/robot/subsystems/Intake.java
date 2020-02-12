@@ -25,7 +25,7 @@ public class Intake extends Subsystem {
     // setDefaultCommand(new MySpecialCommand());
     
     VictorSPX spinner = new VictorSPX(RobotMap.INTAKE_SPIN_MOTOR_ID);
-    VictorSPX lifter = new VictorSPX(RobotMap.INTAKE_LIFT_MOTOR_ID);
+    //VictorSPX lifter = new VictorSPX(RobotMap.INTAKE_LIFT_MOTOR_ID);
 
 
 

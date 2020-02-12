@@ -17,20 +17,20 @@ public class RobotMap {
 
 	//CAN maping
 	public static final int LEFT_DRIVE_MOTOR1_ID = 5; 	//front left motor CAN ID
-	public static final int RIGHT_DRIVE_MOTOR1_ID = 4;	//front right motor CAN ID
-	public static final int LEFT_DRIVE_MOTOR2_ID = 2;	//back left motor CAN ID
+	public static final int RIGHT_DRIVE_MOTOR1_ID = 6;	//front right motor CAN ID
+	public static final int LEFT_DRIVE_MOTOR2_ID = 4;	//back left motor CAN ID
 	public static final int RIGHT_DRIVE_MOTOR2_ID = 3;	//back right motor CAN ID
 
-	public static final int LEFT_LOW_FLYWHEEL_MOTOR_ID = 7; 	//lower left motor CAN ID
-	public static final int RIGHT_LOW_FLYWHEEL_MOTOR_ID = 6;	//lower right motor CAN ID
-	public static final int LEFT_HIGH_FLYWHEEL_MOTOR_ID = 0;	//upper left motor CAN ID
-	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 1;	//upper right motor CAN ID
+	public static final int LEFT_LOW_FLYWHEEL_MOTOR_ID = 1; 	//lower left motor CAN ID
+	public static final int RIGHT_LOW_FLYWHEEL_MOTOR_ID = 2;	//lower right motor CAN ID
+	public static final int LEFT_HIGH_FLYWHEEL_MOTOR_ID = 7;	//upper left motor CAN ID
+	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 8;	//upper right motor CAN ID
 
 	public static final int LEFT_INDEXER_MOTOR_ID = 0;
-	public static final int RIGHT_INDEXER_MOTOR_ID = 0;
+	//public static final int RIGHT_INDEXER_MOTOR_ID = 0;
 
-	public static final int INTAKE_SPIN_MOTOR_ID = 0;
-	public static final int INTAKE_LIFT_MOTOR_ID = 0;
+	public static final int INTAKE_SPIN_MOTOR_ID = 9;
+	//public static final int INTAKE_LIFT_MOTOR_ID = 0;
 
 	
 	//Controller maping

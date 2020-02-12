@@ -24,7 +24,7 @@ public class Indexer extends Subsystem {
     //not used
   }
 
-  private VictorSPX rightMotor = new VictorSPX(RobotMap.RIGHT_INDEXER_MOTOR_ID);
+  //private VictorSPX rightMotor = new VictorSPX(RobotMap.RIGHT_INDEXER_MOTOR_ID);
   private VictorSPX leftMotor = new VictorSPX(RobotMap.LEFT_INDEXER_MOTOR_ID);
 
 
