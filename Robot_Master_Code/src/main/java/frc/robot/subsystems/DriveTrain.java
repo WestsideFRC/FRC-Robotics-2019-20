@@ -34,7 +34,7 @@ public class DriveTrain extends Subsystem {
   //not used since the ControlDrive will control all comands
   @Override
   public void initDefaultCommand() {
-    setDefaultCommand(new TeleOpDrive());
+    //setDefaultCommand(new TeleOpDrive());
   }
 
   public DriveTrain(){

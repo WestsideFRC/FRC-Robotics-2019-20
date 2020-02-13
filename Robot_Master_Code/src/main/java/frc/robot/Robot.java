@@ -43,6 +43,9 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     m_oi = new OI();
+
+    TeleOp teleOp = new TeleOp();
+
     //m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
     //SmartDashboard.putData("Auto mode", m_chooser);
@@ -121,7 +124,7 @@ public class Robot extends TimedRobot {
       m_autonomousCommand.cancel();
     }
 
-    TeleOp teleOp = new TeleOp();
+    //TeleOp teleOp = new TeleOp();
   
   }
 

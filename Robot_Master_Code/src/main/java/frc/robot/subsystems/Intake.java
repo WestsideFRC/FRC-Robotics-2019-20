@@ -7,10 +7,12 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.TeleOpIntake;
 
 /**
  * Add your docs here.
@@ -25,9 +27,10 @@ public class Intake extends Subsystem {
     // setDefaultCommand(new MySpecialCommand());
     
     VictorSPX spinner = new VictorSPX(RobotMap.INTAKE_SPIN_MOTOR_ID);
-    //VictorSPX lifter = new VictorSPX(RobotMap.INTAKE_LIFT_MOTOR_ID);
-
-
+    
+    public void spin(double percent){
+      spinner.set(ControlMode.PercentOutput,percent);
+    }
 
   }
 }

@@ -21,7 +21,7 @@ public class FlyWheel extends Subsystem {
 
   @Override
   public void initDefaultCommand() {
-    setDefaultCommand(new TeleOpFlyWheel());
+    //setDefaultCommand(new TeleOpFlyWheel());
   }
   
   //instances of all four motors that spin the flywheel
