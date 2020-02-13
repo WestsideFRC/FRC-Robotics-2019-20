@@ -26,10 +26,10 @@ public class DriveTrain extends Subsystem {
   // all instances of drive motors
   // LeftMotor2 and RightMotor2 are slaves to LeftMotor1 and RightMotor1
   // respectively
-  private VictorSPX LeftMotor1 = new VictorSPX(RobotMap.LEFT_DRIVE_MOTOR1_ID);
-  private VictorSPX RightMotor1 = new VictorSPX(RobotMap.RIGHT_DRIVE_MOTOR1_ID);
-  private TalonSRX LeftMotor2 = new TalonSRX(RobotMap.LEFT_DRIVE_MOTOR2_ID);
-  private TalonSRX RightMotor2 = new TalonSRX(RobotMap.RIGHT_DRIVE_MOTOR2_ID);
+  private TalonSRX LeftMotor1 = new TalonSRX(RobotMap.LEFT_DRIVE_MOTOR1_ID);
+  private TalonSRX RightMotor1 = new TalonSRX(RobotMap.RIGHT_DRIVE_MOTOR1_ID);
+  private VictorSPX LeftMotor2 = new VictorSPX(RobotMap.LEFT_DRIVE_MOTOR2_ID);
+  private VictorSPX RightMotor2 = new VictorSPX(RobotMap.RIGHT_DRIVE_MOTOR2_ID);
   
   //not used since the ControlDrive will control all comands
   @Override
@@ -39,8 +39,8 @@ public class DriveTrain extends Subsystem {
 
   public DriveTrain(){
     //invert the left motors so that all motors spin the wheels forward
-    LeftMotor1.setInverted(true);
-    LeftMotor2.setInverted(true);
+    RightMotor1.setInverted(true);
+    RightMotor2.setInverted(true);
 
     //set the left and right #2 motors to be slaves to the #1 motors
     //this way, both motors in the same gear box will spin at exactly the same speed

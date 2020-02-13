@@ -31,8 +31,8 @@ public class TeleOpDrive extends Command {
     double drive = RobotMap.DRIVE_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.DRIVE_AXIS);
     double turn = RobotMap.TURN_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.TURN_AXIS);
 
-    Robot.driveTrain.setLeftMotors(drive - turn);
-    Robot.driveTrain.setRightMotors(drive + turn);
+    Robot.driveTrain.setLeftMotors(drive + turn);
+    Robot.driveTrain.setRightMotors(drive - turn);
     
   }
 
