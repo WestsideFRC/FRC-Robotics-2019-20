@@ -38,7 +38,7 @@ public class RobotMap {
 	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
 	
 	public static final int DRIVE_AXIS = 1; 		//the axis that controls moving forward and backward
-	public static final int TURN_AXIS = 2;			//the axis that controls turning left and right
+	public static final int TURN_AXIS = 0;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
 
 	public static final int FLYWHEEL_BUTTON_50 = OI.BUTTON_A;	//buttons that set flywheel power %
 	public static final int FLYWHEEL_BUTTON_75 = OI.BUTTON_B;
