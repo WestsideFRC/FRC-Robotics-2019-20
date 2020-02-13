@@ -13,6 +13,7 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.TeleOp;
 
 /**
  * Add your docs here.
@@ -32,7 +33,7 @@ public class DriveTrain extends Subsystem {
   //not used since the ControlDrive will control all comands
   @Override
   public void initDefaultCommand() {
-    //setDefaultCommand(new ControlDrive());
+    setDefaultCommand(new TeleOp());
   }
 
   public DriveTrain(){
