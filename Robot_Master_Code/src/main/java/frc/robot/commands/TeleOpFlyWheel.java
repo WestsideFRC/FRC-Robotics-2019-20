@@ -22,6 +22,7 @@ public class TeleOpFlyWheel extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    System.out.print("drivetrain online");
   }
 
   // Called repeatedly when this Command is scheduled to run
@@ -35,6 +36,9 @@ public class TeleOpFlyWheel extends Command {
     }
     if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
       Robot.flyWheel.setFlyWheelPower(100);
+    }
+    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
+      Robot.flyWheel.setFlyWheelPower(0);
     }
   }
 

@@ -12,6 +12,7 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.TeleOpFlyWheel;
 
 /**
  * Add your docs here.
@@ -20,8 +21,7 @@ public class FlyWheel extends Subsystem {
 
   @Override
   public void initDefaultCommand() {
-    //no default command
-    
+    setDefaultCommand(new TeleOpFlyWheel());
   }
   
   //instances of all four motors that spin the flywheel

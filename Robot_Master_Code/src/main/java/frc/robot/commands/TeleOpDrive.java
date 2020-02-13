@@ -20,12 +20,14 @@ public class TeleOpDrive extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    System.out.print("drive online");
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    
+    System.out.print("driverunning");
+
     double drive = RobotMap.DRIVE_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.DRIVE_AXIS);
     double turn = RobotMap.TURN_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.TURN_AXIS);
 
