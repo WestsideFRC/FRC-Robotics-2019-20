@@ -8,11 +8,17 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.robot.*;
+import frc.robot.subsystems.Intake;
 
 public class TeleOpIntake extends Command {
+
+  private OI oi = Robot.m_oi;
+
   public TeleOpIntake() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
+    requires(Robot.intake);
   }
 
   // Called just before this Command runs the first time
@@ -25,9 +31,12 @@ public class TeleOpIntake extends Command {
   @Override
   protected void execute() {
 
-
-
-    
+   if(oi.controller.getRawButtonPressed(RobotMap.IntakeIn)){
+      Robot.intake.spinIntake(50);
+   }
+   if(oi.controller.getRawButtonPressed(RobotMap.IntakeOut)){
+     Robot.intake.spinIntake(-50);
+   }
   }
 
   // Make this return true when this Command no longer needs to run execute()

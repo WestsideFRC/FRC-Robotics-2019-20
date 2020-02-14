@@ -16,17 +16,17 @@ package frc.robot;
 public class RobotMap {
 
 	//CAN maping
-	public static final int LEFT_DRIVE_MOTOR1_ID = 5; 	//front left motor CAN ID
-	public static final int RIGHT_DRIVE_MOTOR1_ID = 6;	//front right motor CAN ID
-	public static final int LEFT_DRIVE_MOTOR2_ID = 4;	//back left motor CAN ID
-	public static final int RIGHT_DRIVE_MOTOR2_ID = 3;	//back right motor CAN ID
+	public static final int LEFT_DRIVE_MOTOR1_ID = 2; 	//front left motor CAN ID
+	public static final int RIGHT_DRIVE_MOTOR1_ID = 3;	//front right motor CAN ID
+	public static final int LEFT_DRIVE_MOTOR2_ID = 1;	//back left motor CAN ID
+	public static final int RIGHT_DRIVE_MOTOR2_ID = 4;	//back right motor CAN ID
 
-	public static final int LEFT_LOW_FLYWHEEL_MOTOR_ID = 1; 	//lower left motor CAN ID
-	public static final int RIGHT_LOW_FLYWHEEL_MOTOR_ID = 2;	//lower right motor CAN ID
-	public static final int LEFT_HIGH_FLYWHEEL_MOTOR_ID = 7;	//upper left motor CAN ID
-	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 8;	//upper right motor CAN ID
+	public static final int LEFT_LOW_FLYWHEEL_MOTOR_ID = 7; 	//lower left motor CAN ID
+	public static final int RIGHT_LOW_FLYWHEEL_MOTOR_ID = 5;	//lower right motor CAN ID
+	public static final int LEFT_HIGH_FLYWHEEL_MOTOR_ID = 8;	//upper left motor CAN ID
+	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 6;	//upper right motor CAN ID
 
-	public static final int LEFT_INDEXER_MOTOR_ID = 0;
+	public static final int LEFT_INDEXER_MOTOR_ID = 10;
 	//public static final int RIGHT_INDEXER_MOTOR_ID = 0;
 
 	public static final int INTAKE_SPIN_MOTOR_ID = 9;
@@ -38,13 +38,14 @@ public class RobotMap {
 	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
 	
 	public static final int DRIVE_AXIS = 1; 		//the axis that controls moving forward and backward
-	public static final int TURN_AXIS = 0;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
+	public static final int TURN_AXIS = 2;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
 
 	public static final int FLYWHEEL_BUTTON_50 = OI.BUTTON_A;	//buttons that set flywheel power %
 	public static final int FLYWHEEL_BUTTON_75 = OI.BUTTON_B;
 	public static final int FLYWHEEL_BUTTON_100 = OI.BUTTON_Y;
 	public static final int FLYWHEEL_BUTTON_0 = OI.BUTTON_X;
-
+	public static final int IntakeIn = OI.RB;
+	public static final int IntakeOut = OI.LB;
 
 	//program constants
 	public static final double TURN_SENSITIVITY = 1; 	//how much the robot turns in responce to the joystick (angular speed per joystick level)

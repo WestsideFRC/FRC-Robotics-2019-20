@@ -7,6 +7,7 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -25,7 +26,7 @@ public class Indexer extends Subsystem {
   }
 
   //private VictorSPX rightMotor = new VictorSPX(RobotMap.RIGHT_INDEXER_MOTOR_ID);
-  private VictorSPX leftMotor = new VictorSPX(RobotMap.LEFT_INDEXER_MOTOR_ID);
+  private TalonSRX indexerMotor = new TalonSRX(RobotMap.LEFT_INDEXER_MOTOR_ID);
 
 
 }

@@ -44,7 +44,8 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     m_oi = new OI();
 
-    TeleOp teleOp = new TeleOp();
+   // TeleOp teleOp = new TeleOp();
+   // teleOp.start();
 
     //m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
@@ -123,6 +124,9 @@ public class Robot extends TimedRobot {
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();
     }
+    
+    TeleOp teleOp = new TeleOp();
+    teleOp.start();
 
     //TeleOp teleOp = new TeleOp();
   
