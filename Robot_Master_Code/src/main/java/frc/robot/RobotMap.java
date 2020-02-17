@@ -30,22 +30,23 @@ public class RobotMap {
 	//public static final int RIGHT_INDEXER_MOTOR_ID = 0;
 
 	public static final int INTAKE_SPIN_MOTOR_ID = 9;
-	//public static final int INTAKE_LIFT_MOTOR_ID = 0;
+	public static final int INTAKE_SOLENOID_ID = 0; //controls whether the intake is up or down
 
 	
 	//Controller maping
 	//TODO: set all contrller mappings to OI constants
 	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
 	
-	public static final int DRIVE_AXIS = 1; 		//the axis that controls moving forward and backward
-	public static final int TURN_AXIS = 2;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
+	public static final int DRIVE_AXIS = OI.JOYST_LEFT_X; 		//the axis that controls moving forward and backward
+	public static final int TURN_AXIS = OI.JOYST_RIGHT_Y;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
 
 	public static final int FLYWHEEL_BUTTON_50 = OI.BUTTON_A;	//buttons that set flywheel power %
 	public static final int FLYWHEEL_BUTTON_75 = OI.BUTTON_B;
 	public static final int FLYWHEEL_BUTTON_100 = OI.BUTTON_Y;
 	public static final int FLYWHEEL_BUTTON_0 = OI.BUTTON_X;
-	public static final int IntakeIn = OI.RB;
-	public static final int IntakeOut = OI.LB;
+	public static final int INTAKE_IN = OI.RB;
+	public static final int INTAKE_OUT = OI.LB;
+	public static final int TOGLE_INTAKE_POSITION = OI.??;
 
 	//program constants
 	public static final double TURN_SENSITIVITY = 1; 	//how much the robot turns in responce to the joystick (angular speed per joystick level)

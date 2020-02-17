@@ -7,6 +7,7 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
@@ -28,5 +29,8 @@ public class Indexer extends Subsystem {
   //private VictorSPX rightMotor = new VictorSPX(RobotMap.RIGHT_INDEXER_MOTOR_ID);
   private TalonSRX indexerMotor = new TalonSRX(RobotMap.LEFT_INDEXER_MOTOR_ID);
 
+  public void spinIndexer(int percent){
+    indexerMotor.set(ControlMode.PercentOutput, percent);
+  }
 
 }

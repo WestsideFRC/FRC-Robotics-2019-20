@@ -25,19 +25,23 @@ public class Intake extends Subsystem {
 
   @Override
   public void initDefaultCommand() {
-    // Set the default command for a subsystem here.
+    // No def command
     // setDefaultCommand(new MySpecialCommand());
-    
-    
-    
-    //public void Spin(double percent){
-      //spinner.set(ControlMode.PercentOutput,percent);
-    //}
-
   }
   TalonSRX intakeMotor = new TalonSRX(RobotMap.INTAKE_SPIN_MOTOR_ID);
   
-  public void spinIntake(double percent){
+  Solenoid solenoid = new Solenoid(RobotMap.INTAKE_SOLENOID_ID);
+  
+  public void setIntakeSpeed(double percent){
    intakeMotor.set(ControlMode.PercentOutput, percent);
+  }
+
+  public void setPosition(boolean isDown){
+    solenoid.set(isDown);
+  }
+
+  public boolean toglePosition(){
+    solenoid.set(solenoid.get());
+    return solenoid.get();
   }
 }

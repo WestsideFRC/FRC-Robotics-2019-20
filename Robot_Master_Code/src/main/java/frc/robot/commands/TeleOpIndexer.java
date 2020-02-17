@@ -8,38 +8,21 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.*;
-import frc.robot.subsystems.Intake;
 
-public class TeleOpIntake extends Command {
-
-  private OI oi = Robot.m_oi;
-
-  public TeleOpIntake() {
+public class TeleOpIndexer extends Command {
+  public TeleOpIndexer() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.intake);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    System.out.print("Intake online");
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-
-   if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_IN)){
-      Robot.intake.setIntakeSpeed(50);
-   }
-   if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_OUT)){
-     Robot.intake.setIntakeSpeed(-50);
-   }
-   if(oi.controller.getRawButtonPressed(RobotMap.TOGLE_INTAKE_POSITION)){
-    Robot.intake.toglePosition();
-   }
   }
 
   // Make this return true when this Command no longer needs to run execute()

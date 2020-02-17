@@ -18,12 +18,16 @@ public class TeleOp extends CommandGroup {
   //all teleop commands
   public TeleOpDrive drive = new TeleOpDrive();
   public TeleOpFlyWheel flywheel = new TeleOpFlyWheel();
+  public TeleOpIntake intake = new TeleOpIntake();
+  public TeleOpIndexer indexer = new TeleOpIndexer();
 
   public TeleOp() {
     //set all commands to run at the smae time durring teleop
     System.out.print("teleop running"); //to see if the method runs
     addParallel(drive);
-    addSequential(flywheel);
+    addParallel(flywheel);
+    addParallel(intake);
+    addSequential(indexer);
     
   }
 }
