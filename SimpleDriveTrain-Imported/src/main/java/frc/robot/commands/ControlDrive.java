@@ -8,38 +8,31 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.*;
-import frc.robot.subsystems.FlyWheel;
+import frc.robot.Robot;
+import frc.robot.RobotMap;
+import frc.robot.OI;
 
-public class TeleOpFlyWheel extends Command {
+public class ControlDrive extends Command {
 
-  private OI oi = Robot.m_oi;
-
-  public TeleOpFlyWheel() {
-    requires(Robot.flyWheel);
+  public ControlDrive() {
+    requires(Robot.driveTrain);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    System.out.print("Flywheel online");
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_50)){
-      Robot.flyWheel.setFlyWheelPower(50);
-    }
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_75)){
-      Robot.flyWheel.setFlyWheelPower(75);
-    }
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
-      Robot.flyWheel.setFlyWheelPower(95);
-    }
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
-      Robot.flyWheel.setFlyWheelPower(0);
-    }
+    
+    double drive = RobotMap.DRIVE_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.DRIVE_AXIS);
+    double turn = RobotMap.TURN_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.TURN_AXIS);
+
+    Robot.driveTrain.setLeftMotors(drive - turn);
+    Robot.driveTrain.setRightMotors(drive + turn);
+    
   }
 
   // Make this return true when this Command no longer needs to run execute()
