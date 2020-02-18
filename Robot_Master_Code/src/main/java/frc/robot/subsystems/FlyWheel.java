@@ -40,10 +40,10 @@ public class FlyWheel extends Subsystem {
   
   public FlyWheel(){
     //set left motors inverted
-    LeftLowFlyMotor.setInverted(true);
-    LeftHighFlyMotor.setInverted(true);
-    RightLowFlyMotor.setInverted(false);
-    RightHighFlyMotor.setInverted(false);
+    LeftLowFlyMotor.setInverted(false);
+    LeftHighFlyMotor.setInverted(false);
+    RightLowFlyMotor.setInverted(true);
+    RightHighFlyMotor.setInverted(true);
 
     //set all motors to be slaves to RightLowFlyMotor
     LeftLowFlyMotor.set(ControlMode.Follower, MASTER_MOTOR_ID);

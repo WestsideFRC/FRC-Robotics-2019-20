@@ -32,19 +32,24 @@ public class TeleOpIntake extends Command {
   protected void execute() {
 
     if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_IN)){
-      Robot.intake.setIntakeSpeed(50);
+      Robot.intake.setIntakeSpeed(10);
+    }else if(oi.controller.getRawButtonReleased(RobotMap.INTAKE_IN)){
+      Robot.intake.setIntakeSpeed(0);
     }
     if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_OUT)){
-     Robot.intake.setIntakeSpeed(-50);
-    }
+     Robot.intake.setIntakeSpeed(-10);
+    }else if(oi.controller.getRawButtonReleased(RobotMap.INTAKE_OUT)){
+      Robot.intake.setIntakeSpeed(0);
+     }
 
-    if(oi.controller.getRawAxis(OI.LT_RT_AXIS) < -.5) {
+/*
+    if(oi.controller.getRawAxis(OI.LT_RT_AXIS) > -.5) {
       Robot.intake.setPosition(false);
     }
-    if(oi.controller.getRawAxis(OI.LT_RT_AXIS) > -.5) {
+    if(oi.controller.getRawAxis(OI.LT_RT_AXIS) < -.5) {
       Robot.intake.setPosition(true);
     }
-
+*/
   }
 
   // Make this return true when this Command no longer needs to run execute()
