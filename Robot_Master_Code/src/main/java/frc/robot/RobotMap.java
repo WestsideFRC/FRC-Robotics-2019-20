@@ -26,7 +26,7 @@ public class RobotMap {
 	public static final int LEFT_HIGH_FLYWHEEL_MOTOR_ID = 8;	//upper left motor CAN ID
 	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 6;	//upper right motor CAN ID
 
-	public static final int LEFT_INDEXER_MOTOR_ID = 10;
+	public static final int INDEXER_MOTOR_ID = 10;
 	//public static final int RIGHT_INDEXER_MOTOR_ID = 0;
 
 	public static final int INTAKE_SPIN_MOTOR_ID = 9;
