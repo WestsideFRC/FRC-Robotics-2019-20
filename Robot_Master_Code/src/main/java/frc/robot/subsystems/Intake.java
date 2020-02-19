@@ -9,9 +9,9 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-import edu.wpi.first.wpilibj.Solenoid;
 
-
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
 
@@ -30,17 +30,17 @@ public class Intake extends Subsystem {
   }
   TalonSRX intakeMotor = new TalonSRX(RobotMap.INTAKE_SPIN_MOTOR_ID);
   
-  Solenoid solenoid = new Solenoid(RobotMap.INTAKE_SOLENOID_ID);
+  DoubleSolenoid solenoid = new DoubleSolenoid(RobotMap.INTAKE_SOLENOID_ID1, RobotMap.INTAKE_SOLENOID_ID2);
   
   public void setIntakeSpeed(double percent){
    intakeMotor.set(ControlMode.PercentOutput, percent);
   }
 
   public void setPosition(boolean isDown){
-    solenoid.set(isDown);
+    solenoid.set(Value.kForward);
   }
 
-  public boolean toglePosition(){
+  public Value toglePosition() {
     solenoid.set(solenoid.get());
     return solenoid.get();
   }

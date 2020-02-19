@@ -30,8 +30,8 @@ public class RobotMap {
 	//public static final int RIGHT_INDEXER_MOTOR_ID = 0;
 
 	public static final int INTAKE_SPIN_MOTOR_ID = 9;
-	public static final int INTAKE_SOLENOID_ID = 0; //controls whether the intake is up or down
-
+	public static final int INTAKE_SOLENOID_ID1 = 0; //controls whether the intake is up or down
+	public static final int INTAKE_SOLENOID_ID2 = 1;
 	
 	//Controller maping
 	//TODO: set all contrller mappings to OI constants
