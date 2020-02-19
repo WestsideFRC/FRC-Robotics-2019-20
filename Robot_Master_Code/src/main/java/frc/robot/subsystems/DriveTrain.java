@@ -37,8 +37,8 @@ public class DriveTrain extends Subsystem {
 
   public DriveTrain(){
     //invert the left motors so that all motors spin the wheels forward
-    RightMotor1.setInverted(true);
-    RightMotor2.setInverted(true);
+    LeftMotor1.setInverted(true);
+    LeftMotor2.setInverted(true);
 
     //set the left and right #2 motors to be slaves to the #1 motors
     //this way, both motors in the same gear box will spin at exactly the same speed
