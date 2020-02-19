@@ -29,13 +29,13 @@ public class TeleOpFlyWheel extends Command {
   @Override
   protected void execute() {
     if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_50)){
-      Robot.flyWheel.setFlyWheelPower(50);
+      Robot.flyWheel.setFlyWheelPower(0.5);
     }
     if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_75)){
-      Robot.flyWheel.setFlyWheelPower(75);
+      Robot.flyWheel.setFlyWheelPower(0.75);
     }
     if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
-      Robot.flyWheel.setFlyWheelPower(95);
+      Robot.flyWheel.setFlyWheelPower(0.95);
     }
     if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
       Robot.flyWheel.setFlyWheelPower(0);

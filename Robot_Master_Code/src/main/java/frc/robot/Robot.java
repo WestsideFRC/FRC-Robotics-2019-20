@@ -127,7 +127,6 @@ public class Robot extends TimedRobot {
     
     TeleOp teleOp = new TeleOp();
     teleOp.start();
-    //TeleOp teleOp = new TeleOp();
   
   }
 

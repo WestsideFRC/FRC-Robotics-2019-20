@@ -30,26 +30,26 @@ public class TeleOpIntake extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-
+    // speed is way too high try not going percentage 0-100 and try decimals ex: .5 = 50%
     if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_IN)){
-      Robot.intake.setIntakeSpeed(10);
+      Robot.intake.setIntakeSpeed(0.25);
     }else if(oi.controller.getRawButtonReleased(RobotMap.INTAKE_IN)){
       Robot.intake.setIntakeSpeed(0);
     }
     if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_OUT)){
-     Robot.intake.setIntakeSpeed(-10);
+     Robot.intake.setIntakeSpeed(-0.25);
     }else if(oi.controller.getRawButtonReleased(RobotMap.INTAKE_OUT)){
       Robot.intake.setIntakeSpeed(0);
      }
 
-/*
+
     if(oi.controller.getRawAxis(OI.LT_RT_AXIS) > -.5) {
       Robot.intake.setPosition(false);
     }
     if(oi.controller.getRawAxis(OI.LT_RT_AXIS) < -.5) {
       Robot.intake.setPosition(true);
     }
-*/
+
   }
 
   // Make this return true when this Command no longer needs to run execute()

@@ -9,7 +9,6 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
@@ -20,7 +19,7 @@ import frc.robot.RobotMap;
 public class Indexer extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-
+  
   @Override
   public void initDefaultCommand() {
     //not used
@@ -29,8 +28,8 @@ public class Indexer extends Subsystem {
   //private VictorSPX rightMotor = new VictorSPX(RobotMap.RIGHT_INDEXER_MOTOR_ID);
   private TalonSRX indexerMotor = new TalonSRX(RobotMap.LEFT_INDEXER_MOTOR_ID);
 
-  public void spinIndexer(int percent){
-    indexerMotor.set(ControlMode.PercentOutput, percent);
+  public void spinIndexer(double d){
+    indexerMotor.set(ControlMode.PercentOutput, d);
   }
 
 }

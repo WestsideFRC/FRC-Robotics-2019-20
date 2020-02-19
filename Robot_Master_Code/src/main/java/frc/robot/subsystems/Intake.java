@@ -45,3 +45,9 @@ public class Intake extends Subsystem {
     return solenoid.get();
   }
 }
+
+
+
+
+
+
