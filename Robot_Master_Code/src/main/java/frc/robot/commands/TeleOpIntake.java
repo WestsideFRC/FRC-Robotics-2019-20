@@ -51,11 +51,38 @@ public class TeleOpIntake extends Command {
     // }
 
     if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_UP)){
-      Robot.intake.setPosition(false);
+      Robot.intake.setPositionDown();
     }
     if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_DOWN)){
-      Robot.intake.setPosition(true);
+      Robot.intake.setPositionUp();
     }
+
+    Robot.intake.setIntakeSpeed(oi.controller.getRawAxis(RobotMap.INTAKE_SPEED));
+
+    //double x = oi.controller.getRawAxis(RobotMap.INTAKE_IN_AND_OUT);
+    //
+    // if(x<-.1){
+    //
+    // } 
+    // else if(x>.1){
+    //   if(x>.9){
+    //     Robot.intake.setIntakeSpeed(.5);
+    //   }
+    //   else if(x>.7){
+    //     Robot.intake.setIntakeSpeed(.3);
+    //   }
+    //   else if(x>.4){
+    //     Robot.intake.setIntakeSpeed(.1);
+    //   } 
+    //   else {
+    //
+    //   }
+    // } 
+    // else {
+    //   Robot.intake.setIntakeSpeed(0);
+    // }
+
+
 
   }
 

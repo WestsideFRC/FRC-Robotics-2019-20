@@ -36,14 +36,17 @@ public class Intake extends Subsystem {
    intakeMotor.set(ControlMode.PercentOutput, percent);
   }
 
-  public void setPosition(boolean isDown){
+  public void setPositionDown(){
     solenoid.set(Value.kForward);
   }
-
-  public Value toglePosition() {
-    solenoid.set(solenoid.get());
-    return solenoid.get();
+  public void setPositionUp(){
+    solenoid.set(Value.kReverse);
   }
+
+  public void setPositionOff(){
+    solenoid.set(Value.kOff);
+  }
+
 }
 
 

@@ -47,7 +47,7 @@ public class RobotMap {
 	//public static final int INTAKE_IN = OI.RB;
 	//public static final int INTAKE_OUT = OI.LB;
 	//public static final int INTAKE_UP_AND_DOWN = OI.LT_RT_AXIS;
-	public static final int INTAKE_IN_AND_OUT = OI.LT_RT_AXIS;
+	public static final int INTAKE_SPEED = OI.LT_RT_AXIS;
 	public static final int INTAKE_UP = OI.RB;
 	public static final int INTAKE_DOWN = OI.LB;
 	public static final int INDEXER_1 = OI.PAD_X; 
