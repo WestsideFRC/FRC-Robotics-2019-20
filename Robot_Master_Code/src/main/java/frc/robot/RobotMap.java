@@ -44,9 +44,11 @@ public class RobotMap {
 	public static final int FLYWHEEL_BUTTON_75 = OI.BUTTON_B;
 	public static final int FLYWHEEL_BUTTON_100 = OI.BUTTON_Y;
 	public static final int FLYWHEEL_BUTTON_0 = OI.BUTTON_X;
-	public static final int INTAKE_IN = OI.RB;
-	public static final int INTAKE_OUT = OI.LB;
-	public static final int INTAKE_UP_AND_DOWN = OI.LT_RT_AXIS;
+	//public static final int INTAKE_IN = OI.RB;
+	//public static final int INTAKE_OUT = OI.LB;
+	//public static final int INTAKE_UP_AND_DOWN = OI.LT_RT_AXIS;
+	public static final int INTAKE_UP = OI.RB;
+	public static final int INTAKE_DOWN = OI.LB;
 	public static final int INDEXER_1 = OI.PAD_X; 
 	public static final int INDEXER_2 = OI.PAD_X; 
 	public static final int INDEXER_3 = OI.PAD_X; 
