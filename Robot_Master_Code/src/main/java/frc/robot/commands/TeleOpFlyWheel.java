@@ -30,16 +30,23 @@ public class TeleOpFlyWheel extends Command {
   protected void execute() {
     if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_50)){
       Robot.flyWheel.setFlyWheelPower(0.5);
+      Robot.flyWheel.spinIndexer(0.5);
     }
     if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_75)){
       Robot.flyWheel.setFlyWheelPower(0.75);
+      Robot.flyWheel.spinIndexer(0.5);
     }
+    
     if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
       Robot.flyWheel.setFlyWheelPower(0.95);
+      Robot.flyWheel.spinIndexer(0.5);
     }
+    
     if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
       Robot.flyWheel.setFlyWheelPower(0);
+      Robot.flyWheel.spinIndexer(0);
     }
+    
   }
 
   // Make this return true when this Command no longer needs to run execute()

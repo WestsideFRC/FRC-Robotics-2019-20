@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.IMotorController;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
@@ -27,7 +28,9 @@ public class FlyWheel extends Subsystem {
   private VictorSPX RightLowFlyMotor = new VictorSPX(RobotMap.RIGHT_LOW_FLYWHEEL_MOTOR_ID); //this motor is the master
   private VictorSPX LeftHighFlyMotor = new VictorSPX(RobotMap.LEFT_HIGH_FLYWHEEL_MOTOR_ID);
   private TalonSRX RightHighFlyMotor = new TalonSRX(RobotMap.RIGHT_HIGH_FLYWHEEL_MOTOR_ID);
- 
+  
+  private TalonSRX indexerMotor = new TalonSRX(RobotMap.INDEXER_MOTOR_ID);
+
   @Override
   public void initDefaultCommand() {
     //setDefaultCommand(new TeleOpFlyWheel());
@@ -35,7 +38,7 @@ public class FlyWheel extends Subsystem {
   
   //set direct references to the master motor for easy use
   //The Master Motor is RightLowMotor.
-  private final int MASTER_MOTOR_ID = RobotMap.RIGHT_HIGH_FLYWHEEL_MOTOR_ID;
+  private final IMotorController MASTER_MOTOR_ID = RightHighFlyMotor;
   private TalonSRX MasterMotor = RightHighFlyMotor;
   
   public FlyWheel(){
@@ -45,16 +48,19 @@ public class FlyWheel extends Subsystem {
     RightLowFlyMotor.setInverted(true);
     RightHighFlyMotor.setInverted(true);
 
+
     //set all motors to be slaves to RightLowFlyMotor
-    LeftLowFlyMotor.set(ControlMode.Follower, MASTER_MOTOR_ID);
-    LeftHighFlyMotor.set(ControlMode.Follower, MASTER_MOTOR_ID);
-    RightLowFlyMotor.set(ControlMode.Follower, MASTER_MOTOR_ID);
+    LeftLowFlyMotor.follow(MASTER_MOTOR_ID);
+    LeftLowFlyMotor.follow(MASTER_MOTOR_ID);
+    LeftHighFlyMotor.follow(MASTER_MOTOR_ID);
+    RightLowFlyMotor.follow(MASTER_MOTOR_ID);
   }
 
   //mothod for setting motor power
   public void setFlyWheelPower(double percent){
     MasterMotor.set(ControlMode.PercentOutput, percent); //only right1 needs to be changed
-   
   }
-
+  public void spinIndexer(double percent){
+    indexerMotor.set(ControlMode.PercentOutput, percent);
+  }
 }

@@ -27,9 +27,10 @@ public class TeleOpIndexer extends Command {
 
   // Called repeatedly when this Command is scheduled to run
   @Override
-  protected void execute() {
+  protected void execute() {/*
     if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_1)){
       Robot.indexer.spinIndexer(0.50);
+  
     }
     if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_2)){
       Robot.indexer.spinIndexer(0.50);
@@ -40,6 +41,7 @@ public class TeleOpIndexer extends Command {
     if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_4)){
       Robot.indexer.spinIndexer(0);
     }
+    */
   }
 
   // Make this return true when this Command no longer needs to run execute()

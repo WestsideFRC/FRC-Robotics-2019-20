@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.IMotorController;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
@@ -29,6 +30,8 @@ public class DriveTrain extends Subsystem {
   private VictorSPX LeftMotor2 = new VictorSPX(RobotMap.LEFT_DRIVE_MOTOR2_ID);
   private VictorSPX RightMotor2 = new VictorSPX(RobotMap.RIGHT_DRIVE_MOTOR2_ID);
   
+  private final IMotorController LEFT = LeftMotor1;
+  private final IMotorController RIGHT = RightMotor1; 
   //not used since the ControlDrive will control all comands
   @Override
   public void initDefaultCommand() {
@@ -42,19 +45,19 @@ public class DriveTrain extends Subsystem {
 
     //set the left and right #2 motors to be slaves to the #1 motors
     //this way, both motors in the same gear box will spin at exactly the same speed
-    LeftMotor2.set(ControlMode.Follower, RobotMap.LEFT_DRIVE_MOTOR1_ID);
-    RightMotor2.set(ControlMode.Follower,RobotMap.RIGHT_DRIVE_MOTOR1_ID);
+    LeftMotor2.follow(LEFT);
+    RightMotor2.follow(RIGHT);
 
   }
 
   //method for setting the speed of the left wheels
   public void setLeftMotors(double percent){
-    LeftMotor1.set(ControlMode.PercentOutput, percent);
+    LEFT.set(ControlMode.PercentOutput, percent);
   }
 
   //method for setting the speed of the right wheels
   public void setRightMotors(double percent){
-    RightMotor1.set(ControlMode.PercentOutput, percent);
+    RIGHT.set(ControlMode.PercentOutput, percent);
   }
 
 }
