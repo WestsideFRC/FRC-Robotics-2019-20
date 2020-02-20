@@ -27,6 +27,7 @@ public class TeleOp extends CommandGroup {
     addParallel(drive);
     addParallel(flywheel);
     addParallel(intake);
+    addParallel(indexer);
     //addSequential(indexer);
     
   }

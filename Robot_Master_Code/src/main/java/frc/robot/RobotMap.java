@@ -47,7 +47,10 @@ public class RobotMap {
 	public static final int INTAKE_IN = OI.RB;
 	public static final int INTAKE_OUT = OI.LB;
 	public static final int INTAKE_UP_AND_DOWN = OI.LT_RT_AXIS;
-
+	public static final int INDEXER_1 = OI.PAD_X; 
+	public static final int INDEXER_2 = OI.PAD_X; 
+	public static final int INDEXER_3 = OI.PAD_X; 
+	public static final int INDEXER_4 = OI.PAD_Y; 
 	//program constants
 	public static final double TURN_SENSITIVITY = 1; 	//how much the robot turns in responce to the joystick (angular speed per joystick level)
 	public static final double DRIVE_SENSITIVITY = 1;	//how fast the robot moves in responce to the joystick (speed per joystick level)

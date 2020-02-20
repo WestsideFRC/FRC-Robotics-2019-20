@@ -28,16 +28,16 @@ public class TeleOpIndexer extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_50)){
+    if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_1)){
       Robot.indexer.spinIndexer(0.50);
     }
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_75)){
+    if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_2)){
       Robot.indexer.spinIndexer(0.50);
     }
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
+    if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_3)){
       Robot.indexer.spinIndexer(0.50);
     }
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
+    if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_4)){
       Robot.indexer.spinIndexer(0);
     }
   }
