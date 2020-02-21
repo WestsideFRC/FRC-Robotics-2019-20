@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.IMotorController;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
@@ -48,19 +49,33 @@ public class FlyWheel extends Subsystem {
     RightLowFlyMotor.setInverted(true);
     RightHighFlyMotor.setInverted(true);
 
-
     //set all motors to be slaves to RightLowFlyMotor
     LeftLowFlyMotor.follow(MASTER_MOTOR_ID);
     LeftLowFlyMotor.follow(MASTER_MOTOR_ID);
     LeftHighFlyMotor.follow(MASTER_MOTOR_ID);
     RightLowFlyMotor.follow(MASTER_MOTOR_ID);
+
+    //setup PID
+    //MasterMotor.set
+
   }
 
   //mothod for setting motor power
-  public void setFlyWheelPower(double percent){
+  public void setRawFlyWheelPower(double percent){
     MasterMotor.set(ControlMode.PercentOutput, percent); //only right1 needs to be changed
   }
   public void spinIndexer(double percent){
     indexerMotor.set(ControlMode.PercentOutput, percent);
   }
+
+  //PID controll function
+  public void setConstantVelicoty(double speed){
+    MasterMotor.set(ControlMode.Velocity,speed);
+  }
+
+
+
+
+
+
 }

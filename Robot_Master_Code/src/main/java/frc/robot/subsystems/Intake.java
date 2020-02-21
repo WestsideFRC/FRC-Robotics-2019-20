@@ -35,7 +35,7 @@ public class Intake extends Subsystem {
   public void setIntakeSpeed(double percent){
    intakeMotor.set(ControlMode.PercentOutput, percent);
   }
-
+  
   public void setPositionDown(){
     solenoid.set(Value.kForward);
   }
