@@ -25,8 +25,9 @@ public class OI {
   public static final int JOYST_LEFT_X = 1;
   public static final int JOYST_RIGHT_Y = 2;
   public static final int JOYST_RIGHT_X = 3;
-  public static final int SHOULDER = 3; //TODO: change numbers to match what should be their!!!
+  public static final int SHOULDER_AXIS = 3; //TODO: change numbers to match what should be their!!!
   public static final int DPAD_X = 1;
+  public static final int DPAD_Y = 1;
 
   //buttons
   public static final int BUTTON_X = 1;
