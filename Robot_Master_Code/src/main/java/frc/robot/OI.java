@@ -19,18 +19,21 @@ public class OI {
   public Joystick controller = new Joystick(RobotMap.CONTROLLER_PORT);
 
   //Logitech Controller Mapping TODO: make sure maping is correct
-  public static int JOYST_LEFT_Y = 0; 
-  public static int JOYST_LEFT_X = 1;
-  public static int JOYST_RIGHT_Y = 2;
-  public static int JOYST_RIGHT_X = 3;
-  public static int BUTTON_X = 1;
-  public static int BUTTON_A = 2;
-  public static int BUTTON_B = 3;
-  public static int BUTTON_Y = 4;
-  public static int LB = 5;
-  public static int RB = 6;
-  public static int LT_RT_AXIS = 3;
-  public static int PAD_X = 1;
-  public static int PAD_Y = 2;
+
+  //Axis
+  public static final int JOYST_LEFT_Y = 0; 
+  public static final int JOYST_LEFT_X = 1;
+  public static final int JOYST_RIGHT_Y = 2;
+  public static final int JOYST_RIGHT_X = 3;
+  public static final int SHOULDER = 3; //TODO: change numbers to match what should be their!!!
+  public static final int DPAD_X = 1;
+
+  //buttons
+  public static final int BUTTON_X = 1;
+  public static final int BUTTON_A = 2;
+  public static final int BUTTON_B = 3;
+  public static final int BUTTON_Y = 4;
+  public static final int LB = 5;
+  public static final int RB = 6;
 
 }
