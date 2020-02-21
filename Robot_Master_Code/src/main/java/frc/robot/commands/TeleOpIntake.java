@@ -31,16 +31,16 @@ public class TeleOpIntake extends Command {
   @Override
   protected void execute() {
     // speed is way too high try not going percentage 0-100 and try decimals ex: .5 = 50%
-    // if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_IN)){
-    //   Robot.intake.setIntakeSpeed(0.5);
-    // }else if(oi.controller.getRawButtonReleased(RobotMap.INTAKE_IN)){
-    //   Robot.intake.setIntakeSpeed(0);
-    // }
-    // if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_OUT)){
-    //  Robot.intake.setIntakeSpeed(-0.5);
-    // }else if(oi.controller.getRawButtonReleased(RobotMap.INTAKE_OUT)){
-    //   Robot.intake.setIntakeSpeed(0);
-    //  }
+    if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_IN)){
+      Robot.intake.setIntakeSpeed(0.5);
+    }else if(oi.controller.getRawButtonReleased(RobotMap.INTAKE_IN)){
+      Robot.intake.setIntakeSpeed(0);
+    }
+    if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_OUT)){
+       Robot.intake.setIntakeSpeed(-0.5);
+    }else if(oi.controller.getRawButtonReleased(RobotMap.INTAKE_OUT)){
+      Robot.intake.setIntakeSpeed(0);
+    }
 
 
     // if(oi.controller.getRawAxis(OI.LT_RT_AXIS) > -.5) {
@@ -57,7 +57,7 @@ public class TeleOpIntake extends Command {
       Robot.intake.setPositionUp();
     }
 
-    Robot.intake.setIntakeSpeed(oi.controller.getRawAxis(RobotMap.INTAKE_SPEED));
+    //Robot.intake.setIntakeSpeed(oi.controller.getRawAxis(RobotMap.INTAKE_SPEED));
 
     //double x = oi.controller.getRawAxis(RobotMap.INTAKE_IN_AND_OUT);
     //
