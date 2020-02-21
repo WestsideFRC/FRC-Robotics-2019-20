@@ -23,7 +23,6 @@ public class TeleOp extends CommandGroup {
 
   public TeleOp() {
     //set all commands to run at the smae time durring teleop
-    System.out.print("teleop running"); //to see if the method runs
     addParallel(drive);
     addParallel(flywheel);
     addParallel(intake);
