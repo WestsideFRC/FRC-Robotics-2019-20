@@ -69,7 +69,7 @@ public class FlyWheel extends Subsystem {
   }
 
   //PID controll function
-  public void setConstantVelicoty(double speed){
+  public void setConstantVelocity(double speed){
     MasterMotor.set(ControlMode.Velocity,speed);
   }
 
