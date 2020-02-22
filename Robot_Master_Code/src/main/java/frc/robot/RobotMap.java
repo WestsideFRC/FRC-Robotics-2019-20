@@ -44,16 +44,16 @@ public class RobotMap {
 	public static final int FLYWHEEL_BUTTON_75 = OI.BUTTON_B;
 	public static final int FLYWHEEL_BUTTON_100 = OI.BUTTON_Y;
 	public static final int FLYWHEEL_BUTTON_0 = OI.BUTTON_X;
-	public static final int INTAKE_IN = OI.RB;
-	public static final int INTAKE_OUT = OI.LB;
+	public static final int INTAKE_IN = OI.RT;
+	public static final int INTAKE_OUT = OI.LT;
 	//public static final int INTAKE_UP_AND_DOWN = OI.LT_RT_AXIS;
-	public static final int INTAKE_SPEED = OI.SHOULDER_AXIS;
+	//public static final int INTAKE_SPEED = OI.SHOULDER_AXIS;
 	public static final int INTAKE_UP = OI.RB;
 	public static final int INTAKE_DOWN = OI.LB;
 	public static final int INDEXER_1 = OI.DPAD_X; 
-	public static final int INDEXER_2 = OI.DPAD_Y; 
-	public static final int INDEXER_3 = OI.DPAD_X; 
-	public static final int INDEXER_4 = OI.DPAD_Y; 
+	//public static final int INDEXER_2 = OI.DPAD_Y; 
+	//public static final int INDEXER_3 = OI.DPAD_X; 
+	//public static final int INDEXER_4 = OI.DPAD_Y; 
 	//program constants
 	public static final double TURN_SENSITIVITY = 0.5; 	//how much the robot turns in responce to the joystick (angular speed per joystick level)
 	public static final double DRIVE_SENSITIVITY = 1;	//how fast the robot moves in responce to the joystick (speed per joystick level)

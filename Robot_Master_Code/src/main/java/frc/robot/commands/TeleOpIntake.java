@@ -37,7 +37,15 @@ public class TeleOpIntake extends Command {
       Robot.intake.setPositionUp();
     }
 
-    Robot.intake.setIntakeSpeed(RobotMap.INTAKE_SENSITIVITY*oi.controller.getRawAxis(RobotMap.INTAKE_SPEED));
+    if(oi.controller.getRawButton(RobotMap.INTAKE_IN)){
+      Robot.intake.setIntakeSpeed(.5);
+    }
+    else if(oi.controller.getRawButton(RobotMap.INTAKE_OUT)){
+      Robot.intake.setIntakeSpeed(-.5);
+    } else {
+      Robot.intake.setIntakeSpeed(0);
+    }
+    //Robot.intake.setIntakeSpeed(RobotMap.INTAKE_SENSITIVITY*oi.controller.getRawAxis(RobotMap.INTAKE_SPEED));
     
   }
 
