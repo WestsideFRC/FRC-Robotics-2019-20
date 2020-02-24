@@ -14,7 +14,7 @@ import frc.robot.*;
 
 public class TeleOpIndexer extends Command {
   
-  private OI oi = Robot.m_oi;
+  //private OI oi = Robot.m_oi;
 
   public TeleOpIndexer() {
     requires(Robot.indexer);
