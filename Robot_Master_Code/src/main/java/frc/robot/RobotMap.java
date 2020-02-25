@@ -27,7 +27,7 @@ public class RobotMap {
 	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 6;	//upper right motor CAN ID
 
 	public static final int INDEXER_MOTOR_ID = 10;
-	//public static final int RIGHT_INDEXER_MOTOR_ID = 0;
+	public static final int FLYwHEEL_INTAKE_MOTOR_ID = 11;
 
 	public static final int INTAKE_SPIN_MOTOR_ID = 9;
 	public static final int INTAKE_SOLENOID_ID1 = 0; //controls whether the intake is up or down
@@ -50,7 +50,7 @@ public class RobotMap {
 	//public static final int INTAKE_SPEED = OI.SHOULDER_AXIS;
 	public static final int INTAKE_UP = OI.RB;
 	public static final int INTAKE_DOWN = OI.LB;
-	public static final int INDEXER_1 = OI.DPAD_X; 
+	public static final int INDEXER = OI.DPAD_X; 
 	//public static final int INDEXER_2 = OI.DPAD_Y; 
 	//public static final int INDEXER_3 = OI.DPAD_X; 
 	//public static final int INDEXER_4 = OI.DPAD_Y; 

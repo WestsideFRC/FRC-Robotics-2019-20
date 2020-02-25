@@ -26,9 +26,14 @@ public class Indexer extends Subsystem {
   }
 
   //private VictorSPX rightMotor = new VictorSPX(RobotMap.RIGHT_INDEXER_MOTOR_ID);
-  TalonSRX indexerMotor = new TalonSRX(RobotMap.INDEXER_MOTOR_ID);
-
+  private TalonSRX indexerMotor = new TalonSRX(RobotMap.INDEXER_MOTOR_ID);
+  private TalonSRX flywheelIntakeMotor = new TalonSRX(RobotMap.FLYwHEEL_INTAKE_MOTOR_ID);
+  
   public void spinIndexer(double percent){
     indexerMotor.set(ControlMode.PercentOutput, percent);
+  }
+
+  public void shoot(double percent){
+    flywheelIntakeMotor.set(ControlMode.PercentOutput, percent); 
   }
 }
