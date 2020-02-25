@@ -30,6 +30,7 @@ public class TeleOpIndexer extends Command {
   protected void execute() {
     if(oi.controller.getRawButton(RobotMap.INDEXER)){
       Robot.indexer.spinIndexer(0.50);
+      Robot.indexer.shoot(0.50);
     }
   }
 
