@@ -14,7 +14,7 @@ import frc.robot.*;
 
 public class TeleOpIndexer extends Command {
   
-  private OI oi = Robot.m_oi;
+ private OI oi = Robot.m_oi;
 
   public TeleOpIndexer() {
     requires(Robot.indexer);
@@ -27,21 +27,15 @@ public class TeleOpIndexer extends Command {
 
   // Called repeatedly when this Command is scheduled to run
   @Override
-  protected void execute() {/*
-    if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_1)){
-      Robot.indexer.spinIndexer(0.50);
-  
-    }
-    if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_2)){
-      Robot.indexer.spinIndexer(0.50);
-    }
-    if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_3)){
-      Robot.indexer.spinIndexer(0.50);
-    }
-    if(oi.controller.getRawButtonPressed(RobotMap.INDEXER_4)){
+  protected void execute() {
+
+    if(oi.controller.getRawButtonPressed(OI.START)){ 
+      Robot.indexer.spinIndexer(0.5);
+      Robot.indexer.shoot(-0.5);
+    }else if (oi.controller.getRawButtonReleased(OI.START)){
       Robot.indexer.spinIndexer(0);
+      Robot.indexer.shoot(0);
     }
-    */
   }
 
   // Make this return true when this Command no longer needs to run execute()

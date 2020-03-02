@@ -27,9 +27,11 @@ public class RobotMap {
 	public static final int RIGHT_HIGH_FLYWHEEL_MOTOR_ID = 6;	//upper right motor CAN ID
 
 	public static final int INDEXER_MOTOR_ID = 10;
-	//public static final int RIGHT_INDEXER_MOTOR_ID = 0;
+	public static final int FLYwHEEL_INTAKE_MOTOR_ID = 11;
 
 	public static final int INTAKE_SPIN_MOTOR_ID = 9;
+
+	//PWM mapping
 	public static final int INTAKE_SOLENOID_ID1 = 0; //controls whether the intake is up or down
 	public static final int INTAKE_SOLENOID_ID2 = 1;
 	
@@ -37,25 +39,25 @@ public class RobotMap {
 	//TODO: set all contrller mappings to OI constants
 	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
 	
-	public static final int DRIVE_AXIS = OI.JOYST_LEFT_X; 		//the axis that controls moving forward and backward
-	public static final int TURN_AXIS = OI.JOYST_LEFT_Y;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
+	public static final int DRIVE_AXIS = OI.JOYST_LEFT_Y; 		//the axis that controls moving forward and backward
+	public static final int TURN_AXIS = OI.JOYST_LEFT_X;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
 
 	public static final int FLYWHEEL_BUTTON_50 = OI.BUTTON_A;	//buttons that set flywheel power %
 	public static final int FLYWHEEL_BUTTON_75 = OI.BUTTON_B;
 	public static final int FLYWHEEL_BUTTON_100 = OI.BUTTON_Y;
 	public static final int FLYWHEEL_BUTTON_0 = OI.BUTTON_X;
-	public static final int INTAKE_IN = OI.RB;
-	public static final int INTAKE_OUT = OI.LB;
+	public static final int INTAKE_IN = OI.RT;
+	public static final int INTAKE_OUT = OI.LT;
 	//public static final int INTAKE_UP_AND_DOWN = OI.LT_RT_AXIS;
-	public static final int INTAKE_SPEED = OI.SHOULDER_AXIS;
+	//public static final int INTAKE_SPEED = OI.SHOULDER_AXIS;
 	public static final int INTAKE_UP = OI.RB;
 	public static final int INTAKE_DOWN = OI.LB;
-	public static final int INDEXER_1 = OI.DPAD_X; 
-	public static final int INDEXER_2 = OI.DPAD_Y; 
-	public static final int INDEXER_3 = OI.DPAD_X; 
-	public static final int INDEXER_4 = OI.DPAD_Y; 
+	public static final int INDEXER = OI.DPAD_X; 
+	//public static final int INDEXER_2 = OI.DPAD_Y; 
+	//public static final int INDEXER_3 = OI.DPAD_X; 
+	//public static final int INDEXER_4 = OI.DPAD_Y; 
 	//program constants
 	public static final double TURN_SENSITIVITY = 0.5; 	//how much the robot turns in responce to the joystick (angular speed per joystick level)
 	public static final double DRIVE_SENSITIVITY = 1;	//how fast the robot moves in responce to the joystick (speed per joystick level)
-
+	public static final double INTAKE_SENSITIVITY = .3;
 }

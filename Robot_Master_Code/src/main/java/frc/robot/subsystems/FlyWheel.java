@@ -29,8 +29,10 @@ public class FlyWheel extends Subsystem {
   private VictorSPX RightLowFlyMotor = new VictorSPX(RobotMap.RIGHT_LOW_FLYWHEEL_MOTOR_ID); //this motor is the master
   private VictorSPX LeftHighFlyMotor = new VictorSPX(RobotMap.LEFT_HIGH_FLYWHEEL_MOTOR_ID);
   private TalonSRX RightHighFlyMotor = new TalonSRX(RobotMap.RIGHT_HIGH_FLYWHEEL_MOTOR_ID);
+
+
   
-  private TalonSRX indexerMotor = new TalonSRX(RobotMap.INDEXER_MOTOR_ID);
+  //private TalonSRX indexerMotor = new TalonSRX(RobotMap.INDEXER_MOTOR_ID);
 
   @Override
   public void initDefaultCommand() {
@@ -50,7 +52,7 @@ public class FlyWheel extends Subsystem {
     RightHighFlyMotor.setInverted(true);
 
     //set all motors to be slaves to RightLowFlyMotor
-    LeftLowFlyMotor.follow(MASTER_MOTOR_ID);
+    //LeftLowFlyMotor.follow(MASTER_MOTOR_ID);
     LeftLowFlyMotor.follow(MASTER_MOTOR_ID);
     LeftHighFlyMotor.follow(MASTER_MOTOR_ID);
     RightLowFlyMotor.follow(MASTER_MOTOR_ID);
@@ -64,12 +66,12 @@ public class FlyWheel extends Subsystem {
   public void setRawFlyWheelPower(double percent){
     MasterMotor.set(ControlMode.PercentOutput, percent); //only right1 needs to be changed
   }
-  public void spinIndexer(double percent){
-    indexerMotor.set(ControlMode.PercentOutput, percent);
-  }
+  // public void spinIndexer(double percent){
+  //   indexerMotor.set(ControlMode.PercentOutput, percent);
+  // }
 
   //PID controll function
-  public void setConstantVelicoty(double speed){
+  public void setConstantVelocity(double speed){
     MasterMotor.set(ControlMode.Velocity,speed);
   }
 
