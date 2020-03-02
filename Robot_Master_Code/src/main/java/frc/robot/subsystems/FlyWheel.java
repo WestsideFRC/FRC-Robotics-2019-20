@@ -73,6 +73,7 @@ public class FlyWheel extends Subsystem {
   }
 
   //mothod for setting motor power
+  //don't use now. We have PID setup, so we don't need this
   public void setRawFlyWheelPower(double percent){
     MasterMotor.set(ControlMode.PercentOutput, percent); //only right1 needs to be changed
   }
@@ -80,7 +81,16 @@ public class FlyWheel extends Subsystem {
   //   indexerMotor.set(ControlMode.PercentOutput, percent);
   // }
 
+
   //PID controll function
+  /*
+    Magnetic Encoder Native Units
+    
+      this uses Magnetic encoder native units
+      the Mag encoder has 4096 "native units" per revolution
+      at 600 RPM, the talon will read 4096 native units/100ms  
+      
+  */
   public void setConstantVelocity(double speed){
     MasterMotor.set(ControlMode.Velocity,speed);
   }
