@@ -39,11 +39,15 @@ public class TeleOpIntake extends Command {
 
     if(oi.controller.getRawButton(RobotMap.INTAKE_IN)){
       Robot.intake.setIntakeSpeed(.5);
+      Robot.indexer.spinIndexer(0.5);
     }
     else if(oi.controller.getRawButton(RobotMap.INTAKE_OUT)){
       Robot.intake.setIntakeSpeed(-.5);
+      Robot.indexer.spinIndexer(0.5);
     } else {
       Robot.intake.setIntakeSpeed(0);
+      Robot.indexer.spinIndexer(0);
+
     }
     //Robot.intake.setIntakeSpeed(RobotMap.INTAKE_SENSITIVITY*oi.controller.getRawAxis(RobotMap.INTAKE_SPEED));
     

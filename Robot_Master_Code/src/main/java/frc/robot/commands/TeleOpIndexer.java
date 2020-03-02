@@ -36,6 +36,12 @@ public class TeleOpIndexer extends Command {
       Robot.indexer.spinIndexer(0);
       Robot.indexer.shoot(0);
     }
+
+    if(oi.controller.getRawButtonPressed(OI.BACK)){
+      Robot.indexer.shoot(0.5);
+    }else if(oi.controller.getRawButtonReleased(OI.BACK)){
+      Robot.indexer.shoot(0); 
+    }
   }
 
   // Make this return true when this Command no longer needs to run execute()
