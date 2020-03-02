@@ -58,7 +58,9 @@ public class FlyWheel extends Subsystem {
     RightLowFlyMotor.follow(MASTER_MOTOR_ID);
 
     //setup PID
-    //MasterMotor.set
+    MasterMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, 0, 10);
+
+    
 
   }
 
