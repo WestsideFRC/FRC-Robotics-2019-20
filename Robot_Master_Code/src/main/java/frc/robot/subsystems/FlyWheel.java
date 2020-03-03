@@ -88,11 +88,28 @@ public class FlyWheel extends Subsystem {
     
       this uses Magnetic encoder native units
       the Mag encoder has 4096 "native units" per revolution
-      at 600 RPM, the talon will read 4096 native units/100ms  
-      
+      at 600 RPM, the talon will read 4096 native units/100ms
+
+      also note that the motors speed is different because of the drivetrain
+
+      (Shooter_rpm) = (motor_rpm) / 4
+
+      (775pro_max_speed) = 18730 rpm
+
+      convert percentMaxSpeed to native units per 100ms
+      percent max speed * max speed{18700} = motor_rpm
+      motor_rpm / 4 = Shooter_rpm
+      Shooter_rpm * 4096 (native units/100ms) / 600 (rpm) = 
+
+
+      18700 / 4 * 4096 / 600 = 95744/3 
+      percent max speed * 95744/3 = actual max speed
   */
-  public void setConstantVelocity(double speed){
-    MasterMotor.set(ControlMode.Velocity,speed);
+  public void setConstantVelocity(double PercentMaxSpeed){
+    
+    MasterMotor.set(ControlMode.Velocity, 
+      PercentMaxSpeed * 95744/3
+    );
   }
 
 
