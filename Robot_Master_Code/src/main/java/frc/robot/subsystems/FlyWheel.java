@@ -103,7 +103,7 @@ public class FlyWheel extends Subsystem {
 
 
       18700 / 4 * 4096 / 600 = 95744/3 
-      percent max speed * 95744/3 = actual max speed
+      percent max speed * 95744/3 = native units per 100ms
   */
   public void setConstantVelocity(double PercentMaxSpeed){
     
