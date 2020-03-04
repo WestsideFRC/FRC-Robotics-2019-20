@@ -31,10 +31,18 @@ public class RobotMap {
 
 	public static final int INTAKE_SPIN_MOTOR_ID = 9;
 
+	public static final int RIGHT_LIFT_ID = 0;
+	public static final int LEFT_LIFT_ID = 0;
+
+
 	//PWM mapping
 	public static final int INTAKE_SOLENOID_ID1 = 0; //controls whether the intake is up or down
 	public static final int INTAKE_SOLENOID_ID2 = 1;
 	
+
+
+
+
 	//Controller maping
 	//TODO: set all contrller mappings to OI constants
 	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
@@ -53,6 +61,9 @@ public class RobotMap {
 	public static final int INTAKE_UP = OI.RB;
 	public static final int INTAKE_DOWN = OI.LB;
 	public static final int INDEXER = OI.DPAD_X; 
+
+	public static final int LIFT_UP = 0;
+	public static final int LIFT_DOWN = 0;
 	//public static final int INDEXER_2 = OI.DPAD_Y; 
 	//public static final int INDEXER_3 = OI.DPAD_X; 
 	//public static final int INDEXER_4 = OI.DPAD_Y; 
