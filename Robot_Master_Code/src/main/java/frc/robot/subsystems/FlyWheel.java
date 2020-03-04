@@ -62,7 +62,7 @@ public class FlyWheel extends Subsystem {
       //setup sensor input
       MasterMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, 0, 10);
       //set sensor phase
-      MasterMotor.setSensorPhase(true); //TODO: set the phase to be correct
+      MasterMotor.setSensorPhase(false); //TODO: set the phase to be correct
 
       //set PID constants - 
       MasterMotor.config_kP(0, 1); //TODO: set kP
