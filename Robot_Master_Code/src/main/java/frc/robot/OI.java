@@ -8,6 +8,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.XboxController;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -17,6 +18,10 @@ public class OI {
 
   //Logitech controller we will use in competition
   public Joystick controller = new Joystick(RobotMap.CONTROLLER_PORT);
+
+  //public XboxController xBox = new XboxController(RobotMap.CONTROLLER_PORT);
+
+
 
   //Logitech Controller Mapping TODO: make sure maping is correct
 

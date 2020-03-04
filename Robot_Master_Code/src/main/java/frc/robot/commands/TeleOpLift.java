@@ -17,8 +17,7 @@ public class TeleOpLift extends Command {
   private OI oi = Robot.m_oi;
 
   public TeleOpLift() {
-    // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
+    requires(Robot.lift);
   }
 
   // Called just before this Command runs the first time
@@ -30,12 +29,14 @@ public class TeleOpLift extends Command {
   @Override
   protected void execute() {
 
-    if(oi.controller.getRawButtonPressed(RobotMap.LIFT_UP)){
-
+    if(oi.controller.getRawButton(RobotMap.LIFT_UP)) {
+      Robot.lift.setPower(0.3);
+    } else if (oi.controller.getRawButton(RobotMap.LIFT_DOWN)) {
+      Robot.lift.setPower(0.3);
     }
-    if(oi.controller.)
-
-
+    else {
+      Robot.lift.brakeStop();
+    }
 
 
 
