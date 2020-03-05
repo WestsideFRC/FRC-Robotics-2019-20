@@ -30,18 +30,18 @@ public class TeleOpIntake extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_UP)){
+    if(oi.xBox.getRawButtonPressed(RobotMap.INTAKE_UP)){
       Robot.intake.setPositionDown();
     }
-    if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_DOWN)){
+    if(oi.xBox.getRawButtonPressed(RobotMap.INTAKE_DOWN)){
       Robot.intake.setPositionUp();
     }
 
-    if(oi.controller.getRawButton(RobotMap.INTAKE_IN)){
+    if(oi.xBox.getRawButton(RobotMap.INTAKE_IN)){
       Robot.intake.setIntakeSpeed(.5);
       Robot.indexer.spinIndexer(0.5);
     }
-    else if(oi.controller.getRawButton(RobotMap.INTAKE_OUT)){
+    else if(oi.xBox.getRawButton(RobotMap.INTAKE_OUT)){
       Robot.intake.setIntakeSpeed(-.5);
       Robot.indexer.spinIndexer(0.5);
     } else {
@@ -49,7 +49,7 @@ public class TeleOpIntake extends Command {
       Robot.indexer.spinIndexer(0);
 
     }
-    //Robot.intake.setIntakeSpeed(RobotMap.INTAKE_SENSITIVITY*oi.controller.getRawAxis(RobotMap.INTAKE_SPEED));
+    //Robot.intake.setIntakeSpeed(RobotMap.INTAKE_SENSITIVITY*oi.xBox.getRawAxis(RobotMap.INTAKE_SPEED));
     
   }
 

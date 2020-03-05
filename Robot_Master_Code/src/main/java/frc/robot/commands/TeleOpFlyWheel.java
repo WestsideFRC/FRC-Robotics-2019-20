@@ -28,21 +28,21 @@ public class TeleOpFlyWheel extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_50)){
+    if(oi.xBox.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_50)){
       Robot.flyWheel.setConstantVelocity(0.5);
       //Robot.flyWheel.spinIndexer(0.5);
     }
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_75)){
+    if(oi.xBox.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_75)){
       Robot.flyWheel.setConstantVelocity(0.75);
       //Robot.flyWheel.spinIndexer(0.5);
     }
     
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
+    if(oi.xBox.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
       Robot.flyWheel.setConstantVelocity(0.95);
       //Robot.flyWheel.spinIndexer(0.5);
     }
     
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
+    if(oi.xBox.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
       Robot.flyWheel.setConstantVelocity(0);
       //Robot.flyWheel.spinIndexer(0);
     }

@@ -29,17 +29,17 @@ public class TeleOpIndexer extends Command {
   @Override
   protected void execute() {
 
-    if(oi.controller.getRawButtonPressed(OI.START)){ 
+    if(oi.xBox.getRawButtonPressed(OI.START)){ 
       Robot.indexer.spinIndexer(0.5);
       Robot.indexer.shoot(-0.5);
-    }else if (oi.controller.getRawButtonReleased(OI.START)){
+    }else if (oi.xBox.getRawButtonReleased(OI.START)){
       Robot.indexer.spinIndexer(0);
       Robot.indexer.shoot(0);
     }
 
-    if(oi.controller.getRawButtonPressed(OI.BACK)){
+    if(oi.xBox.getRawButtonPressed(OI.BACK)){
       Robot.indexer.shoot(0.5);
-    }else if(oi.controller.getRawButtonReleased(OI.BACK)){
+    }else if(oi.xBox.getRawButtonReleased(OI.BACK)){
       Robot.indexer.shoot(0); 
     }
   }
