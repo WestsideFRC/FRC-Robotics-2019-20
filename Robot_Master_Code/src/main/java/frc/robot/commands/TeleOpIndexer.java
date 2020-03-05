@@ -29,19 +29,33 @@ public class TeleOpIndexer extends Command {
   @Override
   protected void execute() {
 
-    if(oi.controller.getRawButtonPressed(OI.START)){ 
+    if(oi.controller.getStartButton()){ 
       Robot.indexer.spinIndexer(0.5);
       Robot.indexer.shoot(-0.5);
-    }else if (oi.controller.getRawButtonReleased(OI.START)){
+    } else {
       Robot.indexer.spinIndexer(0);
       Robot.indexer.shoot(0);
     }
 
-    if(oi.controller.getRawButtonPressed(OI.BACK)){
+    if(oi.controller.getBackButton()){
       Robot.indexer.shoot(0.5);
-    }else if(oi.controller.getRawButtonReleased(OI.BACK)){
+    }else {
       Robot.indexer.shoot(0); 
     }
+
+    // if(oi.controller.getRawButtonPressed(OI.START)){ 
+    //   Robot.indexer.spinIndexer(0.5);
+    //   Robot.indexer.shoot(-0.5);
+    // }else if (oi.controller.getRawButtonReleased(OI.START)){
+    //   Robot.indexer.spinIndexer(0);
+    //   Robot.indexer.shoot(0);
+    // }
+
+    // if(oi.controller.getRawButtonPressed(OI.BACK)){
+    //   Robot.indexer.shoot(0.5);
+    // }else if(oi.controller.getRawButtonReleased(OI.BACK)){
+    //   Robot.indexer.shoot(0); 
+    // }
   }
 
   // Make this return true when this Command no longer needs to run execute()

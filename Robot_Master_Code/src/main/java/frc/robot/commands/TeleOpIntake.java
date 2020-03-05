@@ -7,6 +7,7 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.*;
 
@@ -30,25 +31,41 @@ public class TeleOpIntake extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_UP)){
+    if(oi.controller.getBumper(Hand.kLeft)){
       Robot.intake.setPositionDown();
     }
-    if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_DOWN)){
+    if(oi.controller.getBumper(Hand.kRight)){
       Robot.intake.setPositionUp();
     }
 
-    if(oi.controller.getRawButton(RobotMap.INTAKE_IN)){
-      Robot.intake.setIntakeSpeed(.5);
-      Robot.indexer.spinIndexer(0.5);
-    }
-    else if(oi.controller.getRawButton(RobotMap.INTAKE_OUT)){
-      Robot.intake.setIntakeSpeed(-.5);
-      Robot.indexer.spinIndexer(0.5);
+    if(oi.controller.getTriggerAxis(Hand.kRight) > .03 || oi.controller.getTriggerAxis(Hand.kRight) < -.03){
+      Robot.intake.setIntakeSpeed(oi.controller.getTriggerAxis(Hand.kRight));
+      Robot.indexer.spinIndexer(.5);
     } else {
       Robot.intake.setIntakeSpeed(0);
       Robot.indexer.spinIndexer(0);
-
     }
+
+
+    // if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_UP)){
+    //   Robot.intake.setPositionDown();
+    // }
+    // if(oi.controller.getRawButtonPressed(RobotMap.INTAKE_DOWN)){
+    //   Robot.intake.setPositionUp();
+    // }
+
+    // if(oi.controller.getRawButton(RobotMap.INTAKE_IN)){
+    //   Robot.intake.setIntakeSpeed(.5);
+    //   Robot.indexer.spinIndexer(0.5);
+    // }
+    // else if(oi.controller.getRawButton(RobotMap.INTAKE_OUT)){
+    //   Robot.intake.setIntakeSpeed(-.5);
+    //   Robot.indexer.spinIndexer(0.5);
+    // } else {
+    //   Robot.intake.setIntakeSpeed(0);
+    //   Robot.indexer.spinIndexer(0);
+
+    // }
     //Robot.intake.setIntakeSpeed(RobotMap.INTAKE_SENSITIVITY*oi.controller.getRawAxis(RobotMap.INTAKE_SPEED));
     
   }

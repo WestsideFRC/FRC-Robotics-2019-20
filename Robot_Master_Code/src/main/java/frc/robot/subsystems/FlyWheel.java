@@ -46,7 +46,7 @@ public class FlyWheel extends Subsystem {
   private final IMotorController MASTER_MOTOR_ID = RightHighFlyMotor;
   private TalonSRX MasterMotor = RightHighFlyMotor;
 
-  private DoubleSolenoid hood = new DoubleSolenoid(RobotMap.HOOD_ID1, RobotMap.HOOD_ID2);
+  private Solenoid hood = new Solenoid(RobotMap.HOOD_ID);
   
   public FlyWheel(){
     //set left motors inverted
@@ -86,13 +86,10 @@ public class FlyWheel extends Subsystem {
   // }
 
   public void hoodUp(){
-    hood.set(Value.kForward);
+    hood.set(true);
   }
   public void hoodDown(){
-    hood.set(Value.kReverse);
-  }
-  public void HoodOff(){
-    hood.set(Value.kOff);
+    hood.set(false);
   }
 
 
