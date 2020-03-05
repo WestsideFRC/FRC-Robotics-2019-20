@@ -12,7 +12,8 @@ import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.IMotorController;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
-
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
@@ -45,7 +46,7 @@ public class FlyWheel extends Subsystem {
   private final IMotorController MASTER_MOTOR_ID = RightHighFlyMotor;
   private TalonSRX MasterMotor = RightHighFlyMotor;
 
-  private Solenoid hood = new Solenoid(RobotMap.HOOD_ID);
+  private DoubleSolenoid hood = new DoubleSolenoid(RobotMap.HOOD_ID1, RobotMap.HOOD_ID2);
   
   public FlyWheel(){
     //set left motors inverted
@@ -84,14 +85,13 @@ public class FlyWheel extends Subsystem {
   //   indexerMotor.set(ControlMode.PercentOutput, percent);
   // }
 
-  public void setPositionDown(){
+  public void hoodUp(){
     hood.set(Value.kForward);
   }
-  public void setPositionUp(){
+  public void hoodDown(){
     hood.set(Value.kReverse);
   }
-
-  public void setPositionOff(){
+  public void HoodOff(){
     hood.set(Value.kOff);
   }
 

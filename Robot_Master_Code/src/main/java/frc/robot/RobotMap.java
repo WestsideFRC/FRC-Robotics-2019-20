@@ -41,7 +41,8 @@ public class RobotMap {
 	//PWM mapping
 	public static final int INTAKE_SOLENOID_ID1 = 0; //controls whether the intake is up or down
 	public static final int INTAKE_SOLENOID_ID2 = 1;
-	public static final int HOOD_ID = 2;
+	public static final int HOOD_ID1 = 2;
+	public static final int HOOD_ID2 = 3;
 	
 
 
@@ -59,8 +60,6 @@ public class RobotMap {
 	public static final int FLYWHEEL_BUTTON_100 = OI.BUTTON_Y;
 	public static final int FLYWHEEL_BUTTON_0 = OI.BUTTON_X;
 
-	public static final int FLYWHEEL_PISTON = 0;
-
 	public static final int INTAKE_IN = OI.RT;
 	public static final int INTAKE_OUT = OI.LT;
 	public static final int INTAKE_UP = OI.RB;
@@ -70,6 +69,9 @@ public class RobotMap {
 
 	public static final int LIFT_UP = 0;
 	public static final int LIFT_DOWN = 0;
+
+	public static final int HOOD_UP = 0;
+	public static final int HOOD_DOWN = 0;
 
 
 	//program constants

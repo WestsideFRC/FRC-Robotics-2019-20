@@ -36,15 +36,21 @@ public class TeleOpFlyWheel extends Command {
       Robot.flyWheel.setConstantVelocity(0.75);
       //Robot.flyWheel.spinIndexer(0.5);
     }
-    
     if(oi.xBox.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
       Robot.flyWheel.setConstantVelocity(0.95);
       //Robot.flyWheel.spinIndexer(0.5);
     }
-    
     if(oi.xBox.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
       Robot.flyWheel.setConstantVelocity(0);
       //Robot.flyWheel.spinIndexer(0);
+    }
+
+
+    if(oi.xBox.getRawButtonPressed(RobotMap.HOOD_UP)){
+      Robot.flyWheel.hoodUp();
+    }
+    if(oi.xBox.getRawButtonPressed(RobotMap.HOOD_DOWN)){
+      Robot.flyWheel.hoodDown();
     }
     
   }
