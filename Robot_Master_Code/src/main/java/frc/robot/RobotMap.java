@@ -35,9 +35,6 @@ public class RobotMap {
 	public static final int LEFT_LIFT_ID = 0;
 
 
-
-
-
 	//PWM mapping
 	public static final int INTAKE_SOLENOID_ID1 = 0; //controls whether the intake is up or down
 	public static final int INTAKE_SOLENOID_ID2 = 1;
@@ -48,9 +45,10 @@ public class RobotMap {
 
 	//controller mapping
 
+
+	//Controller maping
+	//TODO: set all contrller mappings to OI constants
 	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
-
-
 	
 	public static final int DRIVE_AXIS = OI.JOYST_LEFT_Y; 		//the axis that controls moving forward and backward
 	public static final int TURN_AXIS = OI.JOYST_LEFT_X;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
@@ -72,7 +70,6 @@ public class RobotMap {
 
 	public static final int HOOD_UP = 0;
 	public static final int HOOD_DOWN = 0;
-
 
 	//program constants
 	public static final double TURN_SENSITIVITY = 0.5; 	//how much the robot turns in responce to the joystick (angular speed per joystick level)

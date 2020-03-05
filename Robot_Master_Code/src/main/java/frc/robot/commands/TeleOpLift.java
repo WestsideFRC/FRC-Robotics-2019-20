@@ -29,9 +29,9 @@ public class TeleOpLift extends Command {
   @Override
   protected void execute() {
 
-    if(oi.xBox.getRawButton(RobotMap.LIFT_UP)) {
+    if(oi.controller.getRawButton(RobotMap.LIFT_UP)) {
       Robot.lift.setPower(0.3);
-    } else if (oi.xBox.getRawButton(RobotMap.LIFT_DOWN)) {
+    } else if (oi.controller.getRawButton(RobotMap.LIFT_DOWN)) {
       Robot.lift.setPower(0.3);
     }
     else {

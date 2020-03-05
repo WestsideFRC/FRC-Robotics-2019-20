@@ -28,8 +28,8 @@ public class TeleOpDrive extends Command {
   protected void execute() {
     System.out.print("driverunning");
 
-    double drive = RobotMap.DRIVE_SENSITIVITY * Robot.m_oi.xBox.getRawAxis(RobotMap.DRIVE_AXIS);
-    double turn = RobotMap.TURN_SENSITIVITY * Robot.m_oi.xBox.getRawAxis(RobotMap.TURN_AXIS);
+    double drive = RobotMap.DRIVE_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.DRIVE_AXIS);
+    double turn = RobotMap.TURN_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.TURN_AXIS);
 
     // if(drive>.1 & Math.abs(turn)>.1){
       Robot.driveTrain.setLeftMotors(drive - turn);

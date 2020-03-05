@@ -17,22 +17,19 @@ import edu.wpi.first.wpilibj.XboxController;
 public class OI {
 
   //Logitech controller we will use in competition
-  //public Joystick controller = new Joystick(RobotMap.CONTROLLER_PORT);
+  public Joystick controller = new Joystick(RobotMap.CONTROLLER_PORT);
 
-  public XboxController xBox = new XboxController(RobotMap.CONTROLLER_PORT);
-
-
+  //public XboxController xBox = new XboxController(RobotMap.CONTROLLER_PORT);
 
 
 
-
-  //xbox mapping
+  //Logitech Controller Mapping TODO: make sure maping is correct
 
   //Axis
-  public static final int JOYST_LEFT_Y = 2; 
-  public static final int JOYST_LEFT_X = 1;
-  public static final int JOYST_RIGHT_Y = 5;
-  public static final int JOYST_RIGHT_X = 4;
+  public static final int JOYST_LEFT_Y = 1; 
+  public static final int JOYST_LEFT_X = 2;
+  public static final int JOYST_RIGHT_Y = 4;
+  public static final int JOYST_RIGHT_X = 3;
 
   //public static final int SHOULDER_AXIS = 3; //TODO: change numbers to match what should be their!!!
   public static final int DPAD_X = 5;
@@ -40,9 +37,9 @@ public class OI {
 
 
   //buttons
-  public static final int BUTTON_X = 3;
-  public static final int BUTTON_A = 1;
-  public static final int BUTTON_B = 2;
+  public static final int BUTTON_X = 1;
+  public static final int BUTTON_A = 2;
+  public static final int BUTTON_B = 3;
   public static final int BUTTON_Y = 4;
   
   public static final int LB = 5;
@@ -51,11 +48,7 @@ public class OI {
   public static final int LT = 7;
   public static final int RT = 8;
 
-  public static final int BACK = 7;
-  public static final int START = 8;
-
-  
-
-  
+  public static final int BACK = 9;
+  public static final int START = 10;
 
 }
