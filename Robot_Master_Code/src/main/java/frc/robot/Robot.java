@@ -31,6 +31,7 @@ public class Robot extends TimedRobot {
   public static FlyWheel flyWheel = new FlyWheel();
   public static Indexer indexer = new Indexer();
   public static Intake intake = new Intake();
+  public static Lift lift = new Lift();
 
 
   Command m_autonomousCommand;

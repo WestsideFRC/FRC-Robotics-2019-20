@@ -20,6 +20,7 @@ public class TeleOp extends CommandGroup {
   public TeleOpFlyWheel flywheel = new TeleOpFlyWheel();
   public TeleOpIntake intake = new TeleOpIntake();
   public TeleOpIndexer indexer = new TeleOpIndexer();
+  public TeleOpLift lift = new TeleOpLift();
 
   public TeleOp() {
     //set all commands to run at the smae time durring teleop
@@ -27,6 +28,7 @@ public class TeleOp extends CommandGroup {
     addParallel(flywheel);
     addParallel(intake);
     addParallel(indexer);
+    addParallel(lift);
     //addSequential(indexer);
     
   }
