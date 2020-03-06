@@ -9,6 +9,7 @@ package frc.robot.commands;
 
 
 
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.*;
 
@@ -29,7 +30,7 @@ public class TeleOpIndexer extends Command {
   @Override
   protected void execute() {
 
-    if(oi.controller.getStartButton()){ 
+    if(oi.controller.getBumper(Hand.kRight)){ 
       Robot.indexer.spinIndexer(0.5);
       Robot.indexer.shoot(-0.5);
     } else {
@@ -37,7 +38,7 @@ public class TeleOpIndexer extends Command {
       Robot.indexer.shoot(0);
     }
 
-    if(oi.controller.getBackButton()){
+    if(oi.controller.getBumper(Hand.kLeft)){
       Robot.indexer.shoot(0.5);
     }else {
       Robot.indexer.shoot(0); 

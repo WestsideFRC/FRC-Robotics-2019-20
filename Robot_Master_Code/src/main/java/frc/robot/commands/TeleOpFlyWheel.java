@@ -47,12 +47,11 @@ public class TeleOpFlyWheel extends Command {
       //Robot.flyWheel.spinIndexer(0);
     }
 
-    if(oi.controller.getPOV() != -1) {
-      if(oi.controller.getPOV() < 90 || oi.controller.getPOV() > 270){
-        Robot.flyWheel.hoodUp();
-      } else {
+    if(oi.controller.getStartButton()) {
+      Robot.flyWheel.hoodUp();
+    }
+    if(oi.controller.getBackButton()) {
       Robot.flyWheel.hoodDown();
-      }
     }
 
 

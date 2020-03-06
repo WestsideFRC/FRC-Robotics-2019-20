@@ -31,15 +31,20 @@ public class TeleOpIntake extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    if(oi.controller.getBumper(Hand.kLeft)){
-      Robot.intake.setPositionDown();
-    }
-    if(oi.controller.getBumper(Hand.kRight)){
-      Robot.intake.setPositionUp();
+
+    int pov = oi.controller.getPOV();
+
+    if(pov!=-1){
+      if(pov < 45 || pov > 315){
+        Robot.intake.setPositionDown();
+      }
+      if(pov > 135 && pov < 225){
+        Robot.intake.setPositionUp();
+      }
     }
 
-    if(oi.controller.getTriggerAxis(Hand.kRight) > .03 || oi.controller.getTriggerAxis(Hand.kRight) < -.03){
-      Robot.intake.setIntakeSpeed(oi.controller.getTriggerAxis(Hand.kRight));
+    if(oi.controller.getTriggerAxis(Hand.kRight) > .03 || oi.controller.getTriggerAxis(Hand.kLeft) > .03){
+      Robot.intake.setIntakeSpeed(oi.controller.getTriggerAxis(Hand.kRight) - oi.controller.getTriggerAxis(Hand.kLeft));
       Robot.indexer.spinIndexer(.5);
     } else {
       Robot.intake.setIntakeSpeed(0);

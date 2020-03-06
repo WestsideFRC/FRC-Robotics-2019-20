@@ -30,12 +30,19 @@ public class TeleOpLift extends Command {
   @Override
   protected void execute() {
 
-    if(oi.controller.getStickButton(Hand.kLeft)) {
-      Robot.lift.setPower(.95);
-    } else if (oi.controller.getStickButton(Hand.kRight)) {
-      Robot.lift.setPower(-0.3);
-    }
-    else {
+    int pov = oi.controller.getPOV();
+
+    if(pov!=-1){
+      if(pov > 45 && pov < 135){
+        Robot.lift.setPower(.95);
+      }
+      else if(pov < 315 && pov > 225){
+        Robot.lift.setPower(-.3);
+      } 
+      else {
+        Robot.lift.brakeStop();
+      }
+    } else {
       Robot.lift.brakeStop();
     }
 
