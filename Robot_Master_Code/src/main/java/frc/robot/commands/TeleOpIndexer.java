@@ -33,12 +33,8 @@ public class TeleOpIndexer extends Command {
     if(oi.controller.getBumper(Hand.kRight)){ 
       Robot.indexer.spinIndexer(0.5);
       Robot.indexer.shoot(-0.5);
-    } else {
-      Robot.indexer.spinIndexer(0);
-      Robot.indexer.shoot(0);
-    }
-
-    if(oi.controller.getBumper(Hand.kLeft)){
+    } 
+    else if(oi.controller.getBumper(Hand.kLeft)){
       Robot.indexer.shoot(0.5);
     }else {
       Robot.indexer.shoot(0); 

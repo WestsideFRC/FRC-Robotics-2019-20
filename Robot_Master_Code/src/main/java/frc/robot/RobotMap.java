@@ -31,8 +31,8 @@ public class RobotMap {
 
 	public static final int INTAKE_SPIN_MOTOR_ID = 9;
 
-	public static final int RIGHT_LIFT_ID = 0;
-	public static final int LEFT_LIFT_ID = 0;
+	public static final int RIGHT_LIFT_ID = 12;
+	public static final int LEFT_LIFT_ID = 13;
 
 
 	//PWM mapping
