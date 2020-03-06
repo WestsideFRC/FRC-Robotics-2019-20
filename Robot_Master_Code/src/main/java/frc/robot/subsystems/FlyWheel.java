@@ -69,7 +69,7 @@ public class FlyWheel extends Subsystem {
       MasterMotor.setSensorPhase(false); //TODO: set the phase to be correct
 
       //set PID constants - 
-      MasterMotor.config_kP(0, 0); //TODO: set kP
+      MasterMotor.config_kP(0, .9); //TODO: set kP
       MasterMotor.config_kI(0, 0); 
       MasterMotor.config_kD(0, 0); //TODO: set kD
       MasterMotor.config_kF(0, 12);

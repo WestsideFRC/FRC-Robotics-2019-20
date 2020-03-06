@@ -44,7 +44,7 @@ public class TeleOpIntake extends Command {
     }
 
     if(oi.controller.getTriggerAxis(Hand.kRight) > .03 || oi.controller.getTriggerAxis(Hand.kLeft) > .03){
-      Robot.intake.setIntakeSpeed(oi.controller.getTriggerAxis(Hand.kRight) - oi.controller.getTriggerAxis(Hand.kLeft));
+      Robot.intake.setIntakeSpeed((oi.controller.getTriggerAxis(Hand.kRight) - oi.controller.getTriggerAxis(Hand.kLeft)*RobotMap.INTAKE_SENSITIVITY));
       Robot.indexer.spinIndexer(.5);
     } else {
       Robot.intake.setIntakeSpeed(0);
