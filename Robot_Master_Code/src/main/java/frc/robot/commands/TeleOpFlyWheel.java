@@ -28,24 +28,68 @@ public class TeleOpFlyWheel extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_50)){
+    if(oi.controller.getAButton()){
       Robot.flyWheel.setConstantVelocity(0.5);
       //Robot.flyWheel.spinIndexer(0.5);
     }
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_75)){
+    if(oi.controller.getBButton()){
       Robot.flyWheel.setConstantVelocity(0.75);
       //Robot.flyWheel.spinIndexer(0.5);
     }
     
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
+    if(oi.controller.getYButton()){
       Robot.flyWheel.setConstantVelocity(0.95);
       //Robot.flyWheel.spinIndexer(0.5);
     }
     
-    if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
+    if(oi.controller.getXButton()){
       Robot.flyWheel.setConstantVelocity(0);
       //Robot.flyWheel.spinIndexer(0);
     }
+
+    if(oi.controller.getPOV() != -1) {
+      if(oi.controller.getPOV() < 90 || oi.controller.getPOV() > 270){
+        Robot.flyWheel.hoodUp();
+      } else {
+      Robot.flyWheel.hoodDown();
+      }
+    }
+
+
+    // if(oi.controller.getRawButtonPressed(RobotMap.HOOD_UP)){
+    //   Robot.flyWheel.hoodUp();
+    // }
+    // if(oi.controller.getRawButtonPressed(RobotMap.HOOD_DOWN)){
+    //   Robot.flyWheel.hoodDown();
+    // }
+
+
+    // if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_50)){
+    //   Robot.flyWheel.setConstantVelocity(0.5);
+    //   //Robot.flyWheel.spinIndexer(0.5);
+    // }
+    // if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_75)){
+    //   Robot.flyWheel.setConstantVelocity(0.75);
+    //   //Robot.flyWheel.spinIndexer(0.5);
+    // }
+    
+    // if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_100)){
+    //   Robot.flyWheel.setConstantVelocity(0.95);
+    //   //Robot.flyWheel.spinIndexer(0.5);
+    // }
+    
+    // if(oi.controller.getRawButtonPressed(RobotMap.FLYWHEEL_BUTTON_0)){
+    //   Robot.flyWheel.setConstantVelocity(0);
+    //   //Robot.flyWheel.spinIndexer(0);
+    // }
+
+
+    // if(oi.controller.getRawButtonPressed(RobotMap.HOOD_UP)){
+    //   Robot.flyWheel.hoodUp();
+    // }
+    // if(oi.controller.getRawButtonPressed(RobotMap.HOOD_DOWN)){
+    //   Robot.flyWheel.hoodDown();
+    // }
     
   }
 

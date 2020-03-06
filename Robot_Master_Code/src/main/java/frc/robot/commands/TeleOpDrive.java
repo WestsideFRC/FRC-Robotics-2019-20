@@ -7,6 +7,7 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
@@ -28,8 +29,11 @@ public class TeleOpDrive extends Command {
   protected void execute() {
     System.out.print("driverunning");
 
-    double drive = RobotMap.DRIVE_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.DRIVE_AXIS);
-    double turn = RobotMap.TURN_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.TURN_AXIS);
+    double drive = RobotMap.DRIVE_SENSITIVITY * Robot.m_oi.controller.getY(Hand.kLeft);
+    double turn = RobotMap.TURN_SENSITIVITY * Robot.m_oi.controller.getX(Hand.kRight);
+
+    // double drive = RobotMap.DRIVE_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.DRIVE_AXIS);
+    // double turn = RobotMap.TURN_SENSITIVITY * Robot.m_oi.controller.getRawAxis(RobotMap.TURN_AXIS);
 
     // if(drive>.1 & Math.abs(turn)>.1){
       Robot.driveTrain.setLeftMotors(drive - turn);

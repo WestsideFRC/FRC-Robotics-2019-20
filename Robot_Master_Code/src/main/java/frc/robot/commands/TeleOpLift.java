@@ -7,6 +7,7 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.OI;
 import frc.robot.Robot;
@@ -29,10 +30,10 @@ public class TeleOpLift extends Command {
   @Override
   protected void execute() {
 
-    if(oi.controller.getRawButton(RobotMap.LIFT_UP)) {
-      Robot.lift.setPower(0.3);
-    } else if (oi.controller.getRawButton(RobotMap.LIFT_DOWN)) {
-      Robot.lift.setPower(0.3);
+    if(oi.controller.getStickButton(Hand.kLeft)) {
+      Robot.lift.setPower(.95);
+    } else if (oi.controller.getStickButton(Hand.kRight)) {
+      Robot.lift.setPower(-0.3);
     }
     else {
       Robot.lift.brakeStop();
