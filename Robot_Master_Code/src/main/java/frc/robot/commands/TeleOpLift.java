@@ -37,7 +37,7 @@ public class TeleOpLift extends Command {
         Robot.lift.setPower(.95);
       }
       else if(pov < 315 && pov > 225){
-        Robot.lift.setPower(-.3);
+        Robot.lift.setPower(-.95);
       } 
       else {
         Robot.lift.brakeStop();

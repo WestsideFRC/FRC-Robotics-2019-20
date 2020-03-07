@@ -38,9 +38,9 @@ public class RobotMap {
 	//PWM mapping
 	public static final int INTAKE_SOLENOID_ID1 = 0; //controls whether the intake is up or down
 	public static final int INTAKE_SOLENOID_ID2 = 1;
-	public static final int HOOD_ID = 2;
+	public static final int HOOD_ID_UP = 2;
+	public static final int HOOD_ID_DOWN = 3; 
 	
-
 
 	//controller mapping
 
