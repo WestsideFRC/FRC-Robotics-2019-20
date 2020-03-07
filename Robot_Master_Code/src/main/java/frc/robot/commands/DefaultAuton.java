@@ -7,17 +7,29 @@
 
 package frc.robot.commands;
 
+import java.util.concurrent.TimeUnit;
+
 import edu.wpi.first.wpilibj.command.Command;
+import frc.robot.Robot;
 
 public class DefaultAuton extends Command {
   public DefaultAuton() {
-    // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
+    requires(Robot.driveTrain);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+
+    Robot.driveTrain.setLeftMotors(.5);
+    Robot.driveTrain,setRightMotors(.5);
+
+    TimeUnit.SECONDS.sleep(3);
+
+    Robot.driveTrain.setLeftMotors(0);
+    Robot.driveTrain,setRightMotors(0);
+
+
   }
 
   // Called repeatedly when this Command is scheduled to run
