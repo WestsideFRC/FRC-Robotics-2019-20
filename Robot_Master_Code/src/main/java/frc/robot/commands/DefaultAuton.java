@@ -21,13 +21,7 @@ public class DefaultAuton extends Command {
   @Override
   protected void initialize() {
 
-    Robot.driveTrain.setLeftMotors(.5);
-    Robot.driveTrain.ssetRightMotors(.5);
-
-    TimeUnit.SECONDS.sleep(3);
-
-    Robot.driveTrain.setLeftMotors(0);
-    Robot.driveTrain.setRightMotors(0);
+    Robot.driveTrain.driveDist(12*3, 50);
 
 
   }

@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.IMotorController;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
@@ -48,6 +49,22 @@ public class DriveTrain extends Subsystem {
     LeftMotor2.follow(LEFT);
     RightMotor2.follow(RIGHT);
 
+    LeftMotor1.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, 0, 10);
+    RightMotor1.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, 0, 10);
+
+    LeftMotor1.setSensorPhase(true);
+    RightMotor1.setSensorPhase(true);
+
+    // LeftMotor1.config_kP(0, .9); //TODO: set kP
+    // LeftMotor1.config_kI(0, 0); 
+    // LeftMotor1.config_kD(0, 0); //TODO: set kD
+    // LeftMotor1.config_kF(0, 12);
+
+    // RightMotor1.config_kP(0, .9); //TODO: set kP
+    // RightMotor1.config_kI(0, 0); 
+    // RightMotor1.config_kD(0, 0); //TODO: set kD
+    // RightMotor1.config_kF(0, 12);
+
   }
 
   //method for setting the speed of the left wheels
@@ -60,4 +77,15 @@ public class DriveTrain extends Subsystem {
     RIGHT.set(ControlMode.PercentOutput, percent);
   }
 
+  public double kPos = 4*3.14/4096; //the conversion between Sensor Units and inches
+
+  public void driveDist(double inches, double percentOutput){
+    RIGHT.setSelectedSensorPosition(0, 0, 10);
+    LEFT.setSelectedSensorPosition(0, 0, 10);
+    RIGHT.set(ControlMode.PercentOutput, percentOutput);
+    LEFT.set(ControlMode.PercentOutput, percentOutput);
+    while(RIGHT.getSelectedSensorPosition(0)*kPos < inches);
+    RIGHT.neutralOutput();
+    LEFT.neutralOutput();
+  }
 }
