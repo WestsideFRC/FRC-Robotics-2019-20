@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.*;
 import frc.robot.commands.*;
 
@@ -48,9 +49,9 @@ public class Robot extends TimedRobot {
    // TeleOp teleOp = new TeleOp();
    // teleOp.start();
 
-    //m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
+    m_chooser.setDefaultOption("Default Auto", new DefaultAuton());
     // chooser.addOption("My Auto", new MyAutoCommand());
-    //SmartDashboard.putData("Auto mode", m_chooser);
+    SmartDashboard.putData("Auto mode", m_chooser);
   }
 
   /**
@@ -93,9 +94,6 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
     m_autonomousCommand = m_chooser.getSelected();
-
-    DefaultAuton auton = new DefaultAuton();
-    auton.start();
 
     /*
      * String autoSelected = SmartDashboard.getString("Auto Selector",
