@@ -49,8 +49,8 @@ public class RobotMap {
 	//TODO: set all contrller mappings to OI constants
 	public static final int CONTROLLER_PORT = 0; 	//the port the controller is pluged into
 	
-	public static final int DRIVE_AXIS = OI.JOYST_LEFT_Y; 		//the axis that controls moving forward and backward
-	public static final int TURN_AXIS = OI.JOYST_LEFT_X;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
+	//public static final int DRIVE_AXIS = OI.JOYST_LEFT_Y; 		//the axis that controls moving forward and backward
+	//public static final int TURN_AXIS = OI.JOYST_LEFT_X;			//the axis that controls turning left and right - Note, Aaron changed this from 2 to 0.
 
 	// public static final int FLYWHEEL_BUTTON_50 = OI.BUTTON_A;	//buttons that set flywheel power %
 	// public static final int FLYWHEEL_BUTTON_75 = OI.BUTTON_B;
