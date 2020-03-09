@@ -15,16 +15,41 @@ import frc.robot.Robot;
 public class DefaultAuton extends Command {
   public DefaultAuton() {
     requires(Robot.driveTrain);
+    requires(Robot.flyWheel);
+    requires(Robot.indexer);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-
-    Robot.driveTrain.driveDist(12*3, 50);
-
-
+    timedrive();
   }
+
+  //different autons
+  private void timedrive(){
+    Robot.driveTrain.drive(-0.3);
+    Robot.wait(500);
+    Robot.driveTrain.stop();
+  }
+
+  private void distdrive(){
+    Robot.driveTrain.driveDist(2*12, 0.3);
+  }
+
+  private void shoot(){
+    Robot.flyWheel.setConstantVelocity(2000);
+    Robot.wait(500);
+    Robot.indexer.shoot(-0.5);
+    Robot.indexer.spinIndexer(0.5);
+    Robot.wait(7000);
+    Robot.flyWheel.stop();
+    Robot.indexer.shoot(0);
+    Robot.indexer.spinIndexer(0);
+  }
+
+
+
+
 
   // Called repeatedly when this Command is scheduled to run
   @Override

@@ -10,6 +10,7 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.IMotorController;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
@@ -69,12 +70,21 @@ public class FlyWheel extends Subsystem {
       MasterMotor.setSensorPhase(false); //TODO: set the phase to be correct
 
       //set PID constants - 
-      MasterMotor.config_kP(0, .9); //TODO: set kP
+      MasterMotor.config_kP(0, .1); //TODO: set kP
       MasterMotor.config_kI(0, 0); 
-      MasterMotor.config_kD(0, 0); //TODO: set kD
-      MasterMotor.config_kF(0, 12);
+      MasterMotor.config_kD(0, .02); //TODO: set kD
+      MasterMotor.config_kF(0, .1);
+
+
+      LeftLowFlyMotor.setNeutralMode(NeutralMode.Coast);
+      LeftHighFlyMotor.setNeutralMode(NeutralMode.Coast);
+      RightLowFlyMotor.setNeutralMode(NeutralMode.Coast);
+      RightHighFlyMotor.setNeutralMode(NeutralMode.Coast);
+  
 
   }
+
+  int ticksper100msToRPM= 4096/600;
 
   //mothod for setting motor power
   //don't use now. We have PID setup, so we don't need this
@@ -116,9 +126,13 @@ public class FlyWheel extends Subsystem {
       18700 / 4 * 4096 / 600 = 95744/3 
       percent max speed * 95744/3 = native units per 100ms
   */
-  public void setConstantVelocity(double PercentMaxSpeed){
+  public void setConstantVelocity(double WheelRPM){
     
-    MasterMotor.set(ControlMode.Velocity, PercentMaxSpeed * 100);
+    MasterMotor.set(ControlMode.Velocity, WheelRPM*ticksper100msToRPM);
+  }
+
+  public void stop(){
+    MasterMotor.neutralOutput();
   }
 
 

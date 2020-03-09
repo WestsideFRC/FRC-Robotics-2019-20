@@ -77,6 +77,20 @@ public class DriveTrain extends Subsystem {
     RIGHT.set(ControlMode.PercentOutput, percent);
   }
 
+  public void drive(double speed, double turnH){
+    setLeftMotors(speed - turnH);
+    setRightMotors(speed + turnH);
+  }
+
+  public void drive(double speed){
+    setLeftMotors(speed);
+    setRightMotors(speed);
+  }
+  public void stop(){
+    RIGHT.neutralOutput();
+    LEFT.neutralOutput();
+  }
+
   public double kPos = 4*3.14/4096; //the conversion between Sensor Units and inches
 
   public void driveDist(double inches, double percentOutput){
@@ -85,7 +99,9 @@ public class DriveTrain extends Subsystem {
     RIGHT.set(ControlMode.PercentOutput, percentOutput);
     LEFT.set(ControlMode.PercentOutput, percentOutput);
     while(RIGHT.getSelectedSensorPosition(0)*kPos < inches);
-    RIGHT.neutralOutput();
-    LEFT.neutralOutput();
+    stop();
+  }
+
+  public void driveTime(double seconds, double percentOutput){
   }
 }

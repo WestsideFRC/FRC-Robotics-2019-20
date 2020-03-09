@@ -148,4 +148,13 @@ public class Robot extends TimedRobot {
   @Override
   public void testPeriodic() {
   }
+
+
+  public static void wait(int msec){
+    try {  
+      Thread.sleep(1000);
+    } catch(InterruptedException e){
+          
+    }
+  }
 }
