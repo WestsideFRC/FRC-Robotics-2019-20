@@ -50,7 +50,7 @@ public class Robot extends TimedRobot {
    // teleOp.start();
 
     m_chooser.setDefaultOption("Default Auto", new DefaultAuton());
-    // chooser.addOption("My Auto", new MyAutoCommand());
+    m_chooser.addOption("Auto Without shooting", new AutonNoShoot());
     SmartDashboard.putData("Auto mode", m_chooser);
 
   }
@@ -151,9 +151,9 @@ public class Robot extends TimedRobot {
 
   public static void wait(int msec){
     try {  
-      Thread.sleep(1000);
+      Thread.sleep(msec);
     } catch(InterruptedException e){
-          
+      
     }
   }
 }
