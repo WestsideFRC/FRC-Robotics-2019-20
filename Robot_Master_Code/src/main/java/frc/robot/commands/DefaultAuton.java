@@ -22,8 +22,8 @@ public class DefaultAuton extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    //shoot();
-    distdrive();
+    shoot();
+    timedrive();
   }
 
   //different autons
@@ -34,7 +34,7 @@ public class DefaultAuton extends Command {
   }
 
   private void distdrive(){
-    Robot.driveTrain.driveDist(2*12, 0.3);
+    Robot.driveTrain.driveDist(12, 0.3);
   }
 
   private void shoot(){

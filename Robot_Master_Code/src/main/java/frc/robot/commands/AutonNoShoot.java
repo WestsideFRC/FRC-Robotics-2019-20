@@ -29,6 +29,10 @@ public class AutonNoShoot extends Command {
     Robot.driveTrain.stop();
   }
 
+  private void distdrive(){
+    Robot.driveTrain.driveDist(12, 0.3);
+  }
+
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {

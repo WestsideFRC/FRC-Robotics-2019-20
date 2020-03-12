@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.RobotMap;
 //import frc.robot.commands.TeleOpFlyWheel;
 
@@ -80,7 +81,6 @@ public class FlyWheel extends Subsystem {
       LeftHighFlyMotor.setNeutralMode(NeutralMode.Coast);
       RightLowFlyMotor.setNeutralMode(NeutralMode.Coast);
       RightHighFlyMotor.setNeutralMode(NeutralMode.Coast);
-  
 
   }
 
@@ -134,10 +134,5 @@ public class FlyWheel extends Subsystem {
   public void stop(){
     MasterMotor.neutralOutput();
   }
-
-
-
-
-
 
 }

@@ -14,6 +14,7 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.RobotMap;
 
 /**
@@ -53,7 +54,7 @@ public class DriveTrain extends Subsystem {
     RightMotor1.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, 0, 10);
 
     LeftMotor1.setSensorPhase(true);
-    RightMotor1.setSensorPhase(true);
+    RightMotor1.setSensorPhase(false);
 
     // LeftMotor1.config_kP(0, .9); //TODO: set kP
     // LeftMotor1.config_kI(0, 0); 
@@ -64,7 +65,6 @@ public class DriveTrain extends Subsystem {
     // RightMotor1.config_kI(0, 0); 
     // RightMotor1.config_kD(0, 0); //TODO: set kD
     // RightMotor1.config_kF(0, 12);
-
   }
 
   //method for setting the speed of the left wheels
@@ -98,7 +98,7 @@ public class DriveTrain extends Subsystem {
     LEFT.setSelectedSensorPosition(0, 0, 10);
     RIGHT.set(ControlMode.PercentOutput, percentOutput);
     LEFT.set(ControlMode.PercentOutput, percentOutput);
-    while(RIGHT.getSelectedSensorPosition(0)*kPos < inches);
+    while(RightMotor1.getSelectedSensorPosition(0)*kPos < inches);
     stop();
   }
 
