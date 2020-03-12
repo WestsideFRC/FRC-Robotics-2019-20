@@ -49,8 +49,9 @@ public class Robot extends TimedRobot {
    // TeleOp teleOp = new TeleOp();
    // teleOp.start();
 
-    m_chooser.setDefaultOption("Default Auto", new DefaultAuton());
+    m_chooser.setDefaultOption("Normal Autonomous (shoot, then move)", new DefaultAuton());
     m_chooser.addOption("Auto Without shooting", new AutonNoShoot());
+    m_chooser.addOption("no autonomous", new no_auton());
     SmartDashboard.putData("Auto mode", m_chooser);
 
   }

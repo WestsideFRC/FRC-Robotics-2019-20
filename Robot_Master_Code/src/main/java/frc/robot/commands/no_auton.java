@@ -8,25 +8,16 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.Robot;
 
-public class AutonNoShoot extends Command {
-  public AutonNoShoot() {
-    requires(Robot.driveTrain);
+public class no_auton extends Command {
+  public no_auton() {
+    // Use requires() here to declare subsystem dependencies
+    // eg. requires(chassis);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    
-    timedrive();
-
-  }
-
-  private void timedrive(){
-    Robot.driveTrain.drive(-0.3);
-    Robot.wait(500);
-    Robot.driveTrain.stop();
   }
 
   // Called repeatedly when this Command is scheduled to run
